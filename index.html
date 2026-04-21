@@ -6,229 +6,455 @@
     <title>Maventa Estate - Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/design-system.css">
     <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
-    <div class="hero-page">
-    <header class="hero-section" id="top">
-        <div class="hero-header">
-            <div class="hero-header-container">
-                <a href="index.html" class="hero-logo">
+    <section class="hero-section">
+        <div class="hero-background" aria-hidden="true">
+            <img src="assets/home/FirstSectionBg.png">
+        </div>
+
+        <div class="container">
+            <header class="hero-header-container">
+                <a href="home.html" class="hero-logo">
                     <img src="assets/Logo.png" alt="Maventa Estate Logo">
                 </a>
-
                 <nav class="hero-nav">
                     <a href="index.html" class="nav-link active" aria-current="page">Home</a>
-                    <a href="pages/properties.html" class="nav-link">Properties</a>
-                    <a href="pages/services.html" class="nav-link">Services</a>
-                    <a href="pages/about.html" class="nav-link">About Us</a>
-                    <a href="pages/team.html" class="nav-link">Team</a>
+                    <a href="page/properties.html" class="nav-link">Properties</a>
+                    <a href="page/services.html" class="nav-link">Services</a>
+                    <a href="page/about.html" class="nav-link">About Us</a>
+                    <a href="page/team.html" class="nav-link">Team</a>
                 </nav>
-
                 <a href="#contact" class="btn-talk">LET'S TALK!</a>
-            </div>
-        </div>
+            </header>
 
-        <div class="hero-content">
-            <div class="hero-text-wrapper">
+            <div class="hero-content">
                 <h1 class="hero-title">MAVENTA</h1>
-                <p class="hero-tagline">We redefine the way you discover, visit and choose your home.</p>
+                <div class="hero-main-copy">
+                    <p class="hero-tagline">We redefine the way you discover, visit and choose your home.</p>
+                    <div class="hero-discover-wrapper">
+                        <a href="#building-dreams" class="hero-discover-btn">
+                            <span>DISCOVER MORE!</span>
+                            <svg class="discover-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="hero-background" aria-hidden="true">
-            <img src="assets/home/FirstSectionBg.png" alt="" class="hero-bg-image">
-        </div>
-
-        <div class="hero-discover-wrapper">
-            <a href="#featured" class="hero-discover-btn">
-                <span>DISCOVER MORE!</span>
-                <svg class="discover-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
-        </div>
-    </header>
-
-    <div class="hero-search-wrapper hero-search-below">
-        <form class="hero-search" action="pages/properties.html" method="get">
-            <label class="sr-only" for="q">Caută proprietăți</label>
-            <input id="q" name="q" type="search" placeholder="Ex: 2 camere, Cluj, parcare…" />
-
-            <label class="sr-only" for="type">Tip</label>
-            <select id="type" name="type">
-                <option value="">Tip</option>
-                <option value="apartment">Apartament</option>
-                <option value="house">Casă</option>
-                <option value="land">Teren</option>
-            </select>
-
-            <button class="hero-search-btn" type="submit">
-                <span>Caută</span>
-                <svg class="discover-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-        </form>
-    </div>
-    </div>
+    </section>
 
     <main class="home-main">
-        <section class="stats-showcase" id="dreams" aria-labelledby="stats-showcase-heading">
-            <div class="container stats-showcase-inner">
-                <div class="stats-showcase-content">
-                    <h2 id="stats-showcase-heading" class="stats-showcase-heading">
-                        <span class="stats-showcase-heading-line">BUILDING DREAMS,</span>
-                        <span class="stats-showcase-heading-line">CREATING COMMUNITIES</span>
-                    </h2>
-                    <p class="stats-showcase-lead body-1">
-                        From first visit to final signature, we combine local insight with a calm, professional experience—so you always know what comes next.
+        <section class="dreams-communities" id="building-dreams" aria-labelledby="dreams-heading">
+            <div class="container">
+                <div class="dreams-communities__board">
+                    <div class="dreams-communities__grid">
+                        <div class="dreams-communities__col dreams-communities__col--text">
+                            <h2 id="dreams-heading" class="dreams-communities__title">
+                                <span class="dreams-communities__title-line">Building dreams,</span>
+                                <span class="dreams-communities__title-line">creating communities</span>
+                            </h2>
+                            <hr class="dreams-communities__rule">
+                            <p class="dreams-communities__lead">
+                                With extensive experience in the real estate market, we are dedicated to providing personalized and innovative solutions for each client, turning visions into reality and building sustainable communities.
+                            </p>
+                            <dl class="dreams-communities__stats">
+                                <div class="dreams-communities__stat">
+                                    <dt class="dreams-communities__stat-num">10</dt>
+                                    <dd class="dreams-communities__stat-label">Years of experience</dd>
+                                </div>
+                                <div class="dreams-communities__stat">
+                                    <dt class="dreams-communities__stat-num">500</dt>
+                                    <dd class="dreams-communities__stat-label">Satisfied customers</dd>
+                                </div>
+                            </dl>
+                            <div class="dreams-communities__cta">
+                                <a class="dreams-communities__btn" href="about.html">View More</a>
+                                <ul class="dreams-communities__thumbs" aria-label="Client portraits and interior previews">
+                                    <li>
+                                        <img src="assets/properties/im1.png" width="96" height="96" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/properties/im2.png" width="96" height="96" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/properties/im3.png" width="96" height="96" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/properties/im4.png" width="96" height="96" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <figure class="dreams-communities__figure">
+                            <span class="dreams-communities__figure-bg" aria-hidden="true"></span>
+                            <img
+    class="dreams-communities__photo"
+    src="assets/properties/BuildingDreams.png"
+    width="480"
+    height="570"
+    alt="Modern multi-story residential complex with balconies and landscaped grounds"
+    loading="lazy"
+/>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="properties-section" id="discover-perfect-home" aria-labelledby="properties-section-heading">
+            <div class="container">
+                <header class="properties-section__header">
+                    <h2 id="properties-section-heading" class="properties-section__title">Discover your perfect home</h2>
+                    <p class="properties-section__intro">
+                        Explore a diverse selection of properties to suit every lifestyle. Whether you're looking for a modern home or a centrally located apartment, we have options for all your needs.
                     </p>
-                    <div class="stats-showcase-stats">
-                        <div class="stats-showcase-stat">
-                            <span class="stats-showcase-number">10</span>
-                            <span class="stats-showcase-label">Years of experience</span>
-                        </div>
-                        <div class="stats-showcase-stat">
-                            <span class="stats-showcase-number">500</span>
-                            <span class="stats-showcase-label">Satisfied customers</span>
-                        </div>
-                    </div>
-                    <div class="stats-showcase-actions">
-                        <a class="stats-showcase-cta" href="pages/properties.html">View More</a>
-                        <div class="stats-showcase-avatars" aria-hidden="true">
-                            <img class="stats-showcase-avatar" src="https://i.pravatar.cc/56?img=12" alt="" width="48" height="48" loading="lazy" decoding="async" />
-                            <img class="stats-showcase-avatar" src="https://i.pravatar.cc/56?img=33" alt="" width="48" height="48" loading="lazy" decoding="async" />
-                            <img class="stats-showcase-avatar" src="https://i.pravatar.cc/56?img=45" alt="" width="48" height="48" loading="lazy" decoding="async" />
-                            <img class="stats-showcase-avatar" src="https://i.pravatar.cc/56?img=52" alt="" width="48" height="48" loading="lazy" decoding="async" />
-                        </div>
-                    </div>
+                </header>
+
+                <div class="properties-section__filters" role="toolbar" aria-label="Property type filters">
+                    <button type="button" class="properties-section__filter properties-section__filter--active" aria-pressed="true">All</button>
+                    <button type="button" class="properties-section__filter" aria-pressed="false">Apartments</button>
+                    <button type="button" class="properties-section__filter" aria-pressed="false">Homes</button>
+                    <button type="button" class="properties-section__filter" aria-pressed="false">Offices</button>
+                    <button type="button" class="properties-section__filter" aria-pressed="false">Commercial</button>
+                    <button type="button" class="properties-section__filter" aria-pressed="false">Industrial</button>
+                    <button type="button" class="properties-section__filter" aria-pressed="false">Lands</button>
+                    <button type="button" class="properties-section__filter" aria-pressed="false">Luxury Properties</button>
                 </div>
-                <figure class="stats-showcase-media">
-                    <img
-                        class="stats-showcase-image"
-                        src="assets/home/BuildingDreams.png"
-                        alt="Modern residence with pool at dusk"
-                        width="800"
-                        height="600"
-                        loading="lazy"
-                    />
-                </figure>
+
+                <div class="properties-section__grid">
+                    <article class="property-card">
+                        <figure class="property-card__media">
+                            <img
+                                class="property-card__image"
+                                src="assets/properties/Rustic.png"
+                                width="800"
+                                height="500"
+                                alt="Spacious living room with leather sofa and warm lighting"
+                                loading="lazy"
+                            >
+                        </figure>
+                        <div class="property-card__row">
+                            <span class="property-card__price">$2,500/mo</span>
+                            <span class="property-card__badge property-card__badge--rent">For Rent</span>
+                        </div>
+                        <div class="property-card__body">
+                            <h3 class="property-card__name">Rustic Ranch House</h3>
+                            <p class="property-card__description">Fully furnished studio with natural light, modern kitchen, and easy access to public transport. Ideal for young professionals.</p>
+                            <a class="property-card__more" href="property-details.html">View More</a>
+                        </div>
+                    </article>
+                    <article class="property-card">
+                        <figure class="property-card__media">
+                            <img
+                                class="property-card__image"
+                                src="assets/properties/Luxury.png"
+                                width="800"
+                                height="500"
+                                alt="Bright bedroom with minimalist decor"
+                                loading="lazy"
+                            >
+                        </figure>
+                        <div class="property-card__row">
+                            <span class="property-card__price">$310,500</span>
+                            <span class="property-card__badge property-card__badge--sale">For Sale</span>
+                        </div>
+                        <div class="property-card__body">
+                            <h3 class="property-card__name">Luxury Villa with Ocean View</h3>
+                            <p class="property-card__description">A spacious 4-bedroom house with an open-concept kitchen, large backyar, and two-car garage - perfect for family life.</p>
+                            <a class="property-card__more" href="property-details.html">View More</a>
+                        </div>
+                    </article>
+                    <article class="property-card">
+                        <figure class="property-card__media">
+                            <img
+                                class="property-card__image"
+                                src="assets/properties/Contemporary.png"
+                                width="800"
+                                height="500"
+                                alt="Contemporary home office with plants and natural wood"
+                                loading="lazy"
+                            >
+                        </figure>
+                        <div class="property-card__row">
+                            <span class="property-card__price">$250,500</span>
+                            <span class="property-card__badge property-card__badge--sale">For Sale</span>
+                        </div>
+                        <div class="property-card__body">
+                            <h3 class="property-card__name">Contemporary House in Austin</h3>
+                            <p class="property-card__description">Stylish 3-bedroom home with clean lines, minimalist interior, and solar panels. Located in a quiet residential area close to schools and parks.</p>
+                            <a class="property-card__more" href="property-details.html">View More</a>
+                        </div>
+                    </article>
+                    <article class="property-card">
+                        <figure class="property-card__media">
+                            <img
+                                class="property-card__image"
+                                src="assets/properties/3-Bedroom.png"
+                                width="800"
+                                height="500"
+                                alt="Family living area with seating and natural light"
+                                loading="lazy"
+                            >
+                        </figure>
+                        <div class="property-card__row">
+                            <span class="property-card__price">$3,500/mo</span>
+                            <span class="property-card__badge property-card__badge--rent">For Rent</span>
+                        </div>
+                        <div class="property-card__body">
+                            <h3 class="property-card__name">3-Bedroom Family Home</h3>
+                            <p class="property-card__description">Comfortable and bright, this rental home offers a fenced backyard, large living room, and a quiet neighborhood — pet friendly.</p>
+                            <a class="property-card__more" href="property-details.html">View More</a>
+                        </div>
+                    </article>
+                    <article class="property-card">
+                        <figure class="property-card__media">
+                            <img
+                                class="property-card__image"
+                                src="assets/properties/Downtown.png"
+                                width="800"
+                                height="500"
+                                alt="Open loft-style interior with desk area"
+                                loading="lazy"
+                            >
+                        </figure>
+                        <div class="property-card__row">
+                            <span class="property-card__price">$200,000</span>
+                            <span class="property-card__badge property-card__badge--sale">For Sale</span>
+                        </div>
+                        <div class="property-card__body">
+                            <h3 class="property-card__name">Downtown Chicago Loft</h3>
+                            <p class="property-card__description">Spacious loft with walls, high ceilings, and a renovated interior. Perfect for creatives and professionals seeking a modern lifestyle</p>
+                            <a class="property-card__more" href="property-details.html">View More</a>
+                        </div>
+                    </article>
+                    <article class="property-card">
+                        <figure class="property-card__media">
+                            <img
+                                class="property-card__image"
+                                src="assets/properties/Cozy.png"
+                                width="800"
+                                height="500"
+                                alt="Cozy living space with sofa and soft lighting"
+                                loading="lazy"
+                            >
+                        </figure>
+                        <div class="property-card__row">
+                            <span class="property-card__price">$350,000</span>
+                            <span class="property-card__badge property-card__badge--sale">For Sale</span>
+                        </div>
+                        <div class="property-card__body">
+                            <h3 class="property-card__name">Cozy Cottage Near Lake Tahoe</h3>
+                            <p class="property-card__description">Charming 2-bedroom cottage surrounded by nature, ideal for vacations stays or Airbnb rental. Includes a fireplace and a private garden.</p>
+                            <a class="property-card__more" href="property-details.html">View More</a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <!-- Featured properties -->
-        <section class="home-section" id="featured" aria-labelledby="featured-title">
+        <section class="solutions-section" aria-labelledby="solutions-section-heading">
             <div class="container">
-                <div class="section-head">
-                    <h2 id="featured-title">Proprietăți recomandate</h2>
-                    <a class="section-link" href="pages/properties.html">Vezi toate</a>
-                </div>
-
-                <div class="card-grid">
-                    <article class="property-card">
-                        <div class="property-media" aria-hidden="true"></div>
-                        <div class="property-body">
-                            <h3 class="property-title">Apartament 2 camere, centru</h3>
-                            <p class="property-meta">Cluj-Napoca • 58 m² • Etaj 3</p>
-                            <div class="property-footer">
-                                <span class="property-price">€135,000</span>
-                                <a class="property-cta" href="pages/property-details.html">Detalii</a>
-                            </div>
+                <header class="solutions-section__header">
+                    <h2 id="solutions-section-heading" class="solutions-section-title">The solutions we offer</h2>
+                    <p class="solutions-section__intro">
+                        We combine market insight, modern tools, and dedicated support to connect you with the right property — effortlessly and efficiently.
+                    </p>
+                </header>
+                <div class="solutions-list">
+                    <article class="solutions-item solutions-item--featured">
+                        <span class="solutions-item-number">1</span>
+                        <div class="solutions-item-content">
+                            <h3>Property Sales and Purchase Brokerage</h3>
+                            <p>Complete assistance for buying or selling apartments, houses, land, and commercial spaces.</p>
                         </div>
+                        <a class="solutions-item-btn" href="#contact">LET'S TALK!</a>
                     </article>
-
-                    <article class="property-card">
-                        <div class="property-media" aria-hidden="true"></div>
-                        <div class="property-body">
-                            <h3 class="property-title">Casă modernă cu grădină</h3>
-                            <p class="property-meta">București • 165 m² • 5 camere</p>
-                            <div class="property-footer">
-                                <span class="property-price">€320,000</span>
-                                <a class="property-cta" href="pages/property-details.html">Detalii</a>
-                            </div>
+                    <article class="solutions-item">
+                        <span class="solutions-item-number">2</span>
+                        <div class="solutions-item-content">
+                            <h3>Rental Services (Residential &amp; Commercial)</h3>
+                            <p>Structured leases, tenant matching, and ongoing support for landlords and renters alike.</p>
                         </div>
+                        <a class="solutions-item-btn" href="#contact">LET'S TALK!</a>
                     </article>
-
-                    <article class="property-card">
-                        <div class="property-media" aria-hidden="true"></div>
-                        <div class="property-body">
-                            <h3 class="property-title">Garsonieră pentru investiție</h3>
-                            <p class="property-meta">Timișoara • 28 m² • Randament bun</p>
-                            <div class="property-footer">
-                                <span class="property-price">€59,900</span>
-                                <a class="property-cta" href="pages/property-details.html">Detalii</a>
-                            </div>
+                    <article class="solutions-item">
+                        <span class="solutions-item-number">3</span>
+                        <div class="solutions-item-content">
+                            <h3>Real Estate Evaluation and Consulting</h3>
+                            <p>Data-backed valuations and strategic guidance so every decision is informed and confident.</p>
                         </div>
+                        <a class="solutions-item-btn" href="#contact">LET'S TALK!</a>
+                    </article>
+                    <article class="solutions-item">
+                        <span class="solutions-item-number">4</span>
+                        <div class="solutions-item-content">
+                            <h3>Professional Property Marketing</h3>
+                            <p>Photography, listings, and campaigns designed to showcase your property to the right audience.</p>
+                        </div>
+                        <a class="solutions-item-btn" href="#contact">LET'S TALK!</a>
+                    </article>
+                    <article class="solutions-item">
+                        <span class="solutions-item-number">5</span>
+                        <div class="solutions-item-content">
+                            <h3>Legal Assistance and Contract Support</h3>
+                            <p>Clear documentation and careful review so agreements reflect your interests from day one.</p>
+                        </div>
+                        <a class="solutions-item-btn" href="#contact">LET'S TALK!</a>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Services -->
-        <section class="home-section home-section-alt" id="services" aria-labelledby="services-title">
-            <div class="container">
-                <div class="section-head">
-                    <h2 id="services-title">Serviciile noastre</h2>
-                    <p class="section-subtitle">Tot ce ai nevoie ca să cumperi sau să vinzi fără stres.</p>
+        <section class="consultation-section" aria-labelledby="consultation-title">
+            <div class="container consultation-section__container">
+                <div class="consultation-section__card">
+                    <h2 id="consultation-title" class="consultation-section__title">GET A FREE CONSULTATION TODAY</h2>
+                    <p class="consultation-section__subtitle">
+                        Curious about your next move? Our team can guide you with market insights and personalized recommendations.
+                    </p>
+                    <form class="consultation-section__form" action="#" method="post">
+                        <label class="sr-only" for="consultation-name">Name</label>
+                        <input
+                            id="consultation-name"
+                            class="consultation-section__input"
+                            type="text"
+                            name="name"
+                            placeholder="Your name"
+                            autocomplete="name"
+                            required
+                        >
+                        <label class="sr-only" for="consultation-phone">Phone number</label>
+                        <input
+                            id="consultation-phone"
+                            class="consultation-section__input"
+                            type="tel"
+                            name="phone"
+                            placeholder="Phone number"
+                            autocomplete="tel"
+                            required
+                        >
+                        <button class="consultation-section__button" type="submit">Get a Free Consultation</button>
+                    </form>
                 </div>
+            </div>
+        </section>
 
-                <div class="service-grid">
-                    <article class="service-card">
-                        <h3 class="service-title">Consultanță personalizată</h3>
-                        <p class="service-text">Stabilim bugetul, criteriile și strategia potrivită pentru tine.</p>
+        <section class="why-best-section" aria-labelledby="why-best-title">
+            <div class="container why-best-section__container">
+                <header class="why-best-section__header">
+                    <h2 id="why-best-title" class="why-best-section__title">WHY WE'RE YOUR BEST CHOICE</h2>
+                    <p class="why-best-section__subtitle">
+                        Discover what sets us apart: expert support, trusted outcomes, and a smooth real estate journey from start to finish.
+                    </p>
+                </header>
+                <div class="why-best-section__cards">
+                    <article class="why-best-card">
+                        <div class="why-best-card__content">
+                            <span class="why-best-card__badge">1</span>
+                            <h3 class="why-best-card__title">Expertise &amp; Experience</h3>
+                            <p class="why-best-card__description">
+                                Our professionals combine local market knowledge and strategic advice to help you make confident decisions.
+                            </p>
+                            <p class="why-best-card__metric">20+</p>
+                            <p class="why-best-card__metric-label">Years of experience</p>
+                        </div>
+                        <img class="why-best-card__image" src="assets/properties/im4.png" alt="Modern residential building exterior">
                     </article>
-                    <article class="service-card">
-                        <h3 class="service-title">Evaluare & listare</h3>
-                        <p class="service-text">Preț corect, prezentare profesionistă și promovare targetată.</p>
+                    <article class="why-best-card why-best-card--reverse">
+                        <div class="why-best-card__content">
+                            <span class="why-best-card__badge">2</span>
+                            <h3 class="why-best-card__title">Client Satisfaction</h3>
+                            <p class="why-best-card__description">
+                                We deliver personalized guidance with clear communication, ensuring every client feels supported.
+                            </p>
+                            <p class="why-best-card__metric">95%</p>
+                            <p class="why-best-card__metric-label">Happy clients</p>
+                        </div>
+                        <img class="why-best-card__image" src="assets/properties/im1.png" alt="Smiling clients meeting with an agent">
                     </article>
-                    <article class="service-card">
-                        <h3 class="service-title">Asistență juridică</h3>
-                        <p class="service-text">Documente, antecontract, contract final — totul verificat.</p>
+                    <article class="why-best-card">
+                        <div class="why-best-card__content">
+                            <span class="why-best-card__badge">3</span>
+                            <h3 class="why-best-card__title">Rapid Transactions</h3>
+                            <p class="why-best-card__description">
+                                We streamline every step, from offer to paperwork, so you close quickly and securely.
+                            </p>
+                            <p class="why-best-card__metric">30 DAYS</p>
+                            <p class="why-best-card__metric-label">Average close time</p>
+                        </div>
+                        <img class="why-best-card__image" src="assets/properties/im2.png" alt="Signing contract during a property transaction">
                     </article>
-                    <article class="service-card">
-                        <h3 class="service-title">Vizionări & negociere</h3>
-                        <p class="service-text">Programare rapidă, feedback, negociere în avantajul tău.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <div class="container">
+                <h2 class="team-section-title">MEET OUR EXPERT TEAM</h2>
+                <p class="team-section__intro">
+                    A team of dedicated professionals with extensive real estate experience,ready to help you every step of the way. We focus on providing personalized advice and innovative solutions for your success.
+                </p>
+                <div class="team-grid">
+                    <article class="team-card">
+                        <img src="assets/team/adrian.png" alt="Adrian Popescu, General Manager">
+                        <h3>Adrian Popescu</h3>
+                        <p>General Manager</p>
                     </article>
+                    <article class="team-card">
+                        <img src="assets/team/alice.png" alt="Alice Walker">
+                        <h3>Alice Walker</h3>
+                        <p>Sales Manager</p>
+                    </article>
+                    <article class="team-card">
+                        <img src="assets/team/mihai.png" alt="Mihai Radu">
+                        <h3>Mihai Radu</h3>
+                        <p>Senior Real Estate Agent</p>
+                    </article>
+                    <article class="team-card">
+                        <img src="assets/team/elena.png" alt="Elena Dumitrescu">
+                        <h3>Elena Dumitrescu</h3>
+                        <p>Junior Real Estate Agent</p>
+                    </article>
+                    <article class="team-card">
+                        <img src="assets/team/ioana.png" alt="Ioana Marinescu">
+                        <h3>Ioana Marinescu</h3>
+                        <p>Marketing Coordinator</p>
+                      </article>
+                      
+                      <article class="team-card">
+                        <img src="assets/team/andrei.png" alt="Andrei Neagu">
+                        <h3>Andrei Neagu</h3>
+                        <p>Project Development Manager</p>
+                      </article>
+                      
+                      <article class="team-card">
+                        <img src="assets/team/maria.png" alt="Maria Olteanu">
+                        <h3>Maria Olteanu</h3>
+                        <p>Financial and Mortgage Consult</p>
+                      </article>
+                      
+                      <article class="team-card">
+                        <img src="assets/team/alexandru.png" alt="Alexandru Stancu">
+                        <h3>Alexandru Stancu</h3>
+                        <p>Real Estate Appraisal Specialist</p>
+                      </article>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer" id="contact">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <img src="assets/Logo.png" alt="Maventa Estate Logo" />
-                <p class="footer-text">Agenție imobiliară pentru locuințe și investiții premium.</p>
-            </div>
-
-            <div class="footer-col">
-                <h2 class="footer-title">Contact</h2>
-                <ul class="footer-list">
-                    <li><a href="tel:+40000000000">+40 000 000 000</a></li>
-                    <li><a href="mailto:contact@maventa.example">contact@maventa.example</a></li>
-                    <li>Str. Exemplu 10, România</li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h2 class="footer-title">Link-uri</h2>
-                <ul class="footer-list">
-                    <li><a href="pages/properties.html">Proprietăți</a></li>
-                    <li><a href="#services">Servicii</a></li>
-                    <li><a href="#top">Sus</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div class="container">© <span id="y"></span> Maventa Estate. Toate drepturile rezervate.</div>
+    <footer class="footer" id="contact">
+        <div class="container">
+            <p>© 2025 Maventa Estate. All rights reserved.</p>
         </div>
     </footer>
 
     <script defer src="js/main.js"></script>
 </body>
 </html>
-
