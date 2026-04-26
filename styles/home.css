@@ -1433,11 +1433,15 @@
     flex-direction: column;
     align-items: stretch;
     gap: 10px;
+        padding-left: 0;
+    padding-right: 0;
   }
   .consultation-section__card {
     margin-top: 60px;
     margin-bottom: 60px;
     text-align: start;
+    padding-left: 0;
+    padding-right: 0;
   }
   .consultation-section__title {
     font-size: 34px;
@@ -1726,6 +1730,8 @@
 .faq-section {
   padding: clamp(32px, 5vw, 56px) 0 clamp(8px, 2vw, 16px);
   background: #ffffff;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 
 .faq-section__panel {
@@ -1910,7 +1916,9 @@
 /* -------------------------------------------------------------------------- */
 .contact-section {
   padding: clamp(36px, 5.5vw, 100px) 0 clamp(44px, 7vw, 100px);
-  background: #e9e9ef;
+  background: #F1F0F4;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 
 .contact-section__inner {
