@@ -1,7 +1,7 @@
 /* hero section */
 .prop-page-hero {
   position: relative;
-  min-height: 800px;
+  /* min-height: 800px; */
   background: linear-gradient(180deg, #161261 0%, #5b5894 100%);
   overflow: hidden;
   border-bottom-right-radius: 50px;
@@ -10,7 +10,8 @@
 
 .prop-page-hero .container {
   position: relative;
-  min-height: 800px;
+  /* min-height: 800px; */
+  padding-top: 100px;
 }
 
 .prop-page-hero__copy {
@@ -55,7 +56,7 @@
   justify-content: flex-start;
   position: relative;
   min-height: 716px;
-  padding-top: 84px;
+  padding-top: 104px;
 }
 
 .prop-page-hero__figure {
@@ -94,7 +95,7 @@
 
   .prop-page-hero__body {
     display: block;
-    padding-top: 32px;
+    padding-top: 104px;
   }
 
   .prop-page-hero__stat-num {

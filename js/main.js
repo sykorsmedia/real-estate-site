@@ -92,3 +92,15 @@
   // Recalculate on resize so position stays correct after viewport change
   window.addEventListener("resize", () => goTo(current));
 })();
+
+(function () {
+  const header = document.getElementById("site-header");
+  if (!header) return;
+  window.addEventListener(
+    "scroll",
+    () => {
+      header.classList.toggle("scrolled", window.scrollY > 10);
+    },
+    { passive: true },
+  );
+})();
