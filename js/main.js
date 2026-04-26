@@ -69,3 +69,26 @@
     });
   }
 })();
+
+(function () {
+  const gallery = document.getElementById("mission-gallery");
+  const prev = document.getElementById("mission-prev");
+  const next = document.getElementById("mission-next");
+  if (!gallery || !prev || !next) return;
+
+  const slides = gallery.querySelectorAll(".mission-gallery__slide");
+  let current = 0;
+
+  function goTo(index) {
+    current = Math.max(0, Math.min(index, slides.length - 1));
+    const slideWidth = slides[0].offsetWidth;
+    const gap = parseFloat(getComputedStyle(gallery).gap) || 0;
+    gallery.style.transform = `translateX(-${current * (slideWidth + gap)}px)`;
+  }
+
+  prev.addEventListener("click", () => goTo(current - 1));
+  next.addEventListener("click", () => goTo(current + 1));
+
+  // Recalculate on resize so position stays correct after viewport change
+  window.addEventListener("resize", () => goTo(current));
+})();
