@@ -1,0 +1,299 @@
+.container-services {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+/* ============================================
+   Property Brand Strip
+   ============================================ */
+
+.property-brand-strip {
+  width: 100%;
+  padding: 100px 0 100px;
+  background: #f4f3f8;
+  overflow: hidden;
+}
+
+.property-brand-strip__track {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 0 12px;
+  flex-wrap: nowrap;
+}
+
+.property-brand-strip__item {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.75;
+}
+
+.property-brand-strip__item img {
+  display: block;
+  height: 25px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ============================================
+   Effective Services
+   ============================================ */
+
+.effective-services {
+  padding: 100px 0 100px;
+  background: #ffffff;
+}
+
+.effective-services__intro {
+  max-width: 780px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.effective-services__title {
+  margin: 0 0 10px;
+  color: #2e2c60;
+  font-size: 40px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.effective-services__subtitle {
+  margin: 0;
+  color: #2e2c60;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.effective-services__list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.effective-services__card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 550px);
+  align-items: center;
+  gap: 34px;
+  padding: 16px;
+  border-radius: 24px;
+  background: #f1f0f4;
+}
+
+.effective-services__content {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10px 0 10px 10px;
+}
+
+.effective-services__card-title {
+  margin: 0 0 10px;
+  color: #2c3368;
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+.effective-services__card-text {
+  margin: 0;
+  max-width: 420px;
+  color: #555b74;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.effective-services__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  min-width: 124px;
+  padding: 10px 40px;
+  border: 1px solid #323c87;
+  border-radius: 999px;
+  color: #323c87;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.effective-services__button:hover,
+.effective-services__button:focus-visible {
+  background: #323c87;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.effective-services__media {
+  overflow: hidden;
+  border-radius: 20px;
+  background: #dddfe8;
+  aspect-ratio: 16 / 9;
+}
+
+.effective-services__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (min-width: 768px) {
+  .property-details-hero {
+    height: 800px;
+  }
+
+  .property-summary {
+    border-radius: 32px;
+    padding: 50px 40px 50px;
+  }
+
+  .property-summary__title {
+    font-size: 2.15rem;
+  }
+
+  .property-summary__divider {
+    margin: 50px 0 50px;
+  }
+
+  .property-summary__grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 57px;
+  }
+
+  .property-house-about-gallery-item {
+    flex-basis: 480px;
+    width: 480px;
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .property-summary {
+    margin: 50px 0px;
+    padding: 14px;
+  }
+
+  .property-summary__title {
+    font-size: 32px;
+  }
+
+  .property-house-about {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .property-house-about-section {
+    margin: 30px 0px;
+    padding: 32px 20px;
+  }
+
+  .property-house-about-left {
+    gap: 32px;
+  }
+
+  .property-house-about-block-title {
+    font-size: 28px;
+  }
+
+  .property-house-about-right {
+    position: static;
+  }
+
+  .property-house-about-contact {
+    padding: 24px 18px;
+  }
+
+  .property-house-about-gallery-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .property-house-about-gallery {
+    max-width: 100%;
+  }
+
+  .property-brand-strip {
+    padding: 45px 0 45px;
+  }
+
+  .property-brand-strip__track {
+    justify-content: flex-start;
+    gap: 24px;
+    padding: 0 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .property-brand-strip__track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .effective-services {
+    padding: 50px 0 56px;
+  }
+
+  .effective-services__intro {
+    text-align: start;
+    margin-bottom: 26px;
+  }
+
+  .effective-services__card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 18px;
+  }
+
+  .effective-services__content {
+    padding: 0;
+  }
+
+  .effective-services__card-text {
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .property-house-about-contact-title {
+    font-size: 18px;
+  }
+
+  .property-house-about-contact-form button {
+    width: 100%;
+  }
+
+  .effective-services__title {
+    font-size: 1.45rem;
+  }
+
+  .effective-services__subtitle {
+    font-size: 0.9rem;
+  }
+
+  .effective-services__card-title {
+    font-size: 1.05rem;
+  }
+
+  .effective-services__button {
+    width: 100%;
+  }
+}

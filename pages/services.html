@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ro">
   <head>
     <meta charset="UTF-8" />
@@ -11,60 +11,558 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles/global.css" />
-    <link rel="stylesheet" href="../styles/pages.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/services.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../styles/properties.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <header class="page-header">
-        <div class="page-header-inner">
-          <a class="page-brand" href="../index.html">
-            <img src="../assets/Logo.png" alt="Maventa Estate — home" width="40" height="40" />
-          </a>
+    <div class="page-shell page-shell--properties">
+      <section class="prop-page-hero" aria-labelledby="prop-hero-title">
+        <div class="container-services">
+          <header class="hero-header-container">
+            <a href="../index.html" class="hero-logo">
+              <img src="../assets/Logo.png" alt="Maventa Estate Logo" />
+            </a>
+            <div class="hero-nav-shell">
+              <button
+                type="button"
+                class="mobile-menu-btn"
+                aria-label="Toggle menu"
+                aria-controls="hero-main-nav"
+                aria-expanded="false"
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <nav id="hero-main-nav" class="hero-nav" aria-label="Primary">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="properties.html" class="nav-link" aria-current="page"
+                  >Properties</a
+                >
+                <a href="services.html" class="nav-link active">Services</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="team.html" class="nav-link">Team</a>
+              </nav>
+            </div>
+            <a href="#contact" class="btn-talk">LET'S TALK!</a>
+          </header>
 
-          <nav class="page-nav" id="page-navigation" aria-label="Primary">
-            <a href="../index.html" class="page-nav-link">Home</a>
-            <a href="properties.html" class="page-nav-link">Properties</a>
-            <a href="services.html" class="page-nav-link" aria-current="page">Services</a>
-            <a href="about.html" class="page-nav-link">About</a>
-            <a href="team.html" class="page-nav-link">Team</a>
-          </nav>
-
-          <button
-            type="button"
-            class="page-mobile-menu-btn"
-            aria-label="Toggle menu"
-            aria-controls="page-navigation"
-            aria-expanded="false"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </header>
-
-      <main class="page-main">
-        <div class="page-main-inner">
-          <h1 class="page-title">Services</h1>
-          <p class="page-lead">
-            Pagina de servicii: consultanță, evaluare, listare, vizionări, suport legal.
-          </p>
-
-          <div class="card">
-            <ul class="body-1">
-              <li>Consultanță pentru cumpărare / vânzare</li>
-              <li>Evaluare proprietate</li>
-              <li>Marketing & promovare</li>
-              <li>Asistență juridică</li>
-            </ul>
+          <div class="prop-page-hero__body">
+            <div class="prop-page-hero__copy">
+              <h1 id="prop-hero-title" class="prop-page-hero__title">
+                Comprehensive Real Estate Services.
+              </h1>
+              <p class="prop-page-hero__subtitle">
+                From property search to full transaction support — we guide you
+                at every step.
+              </p>
+              <dl class="prop-page-hero__stats">
+                <div class="prop-page-hero__stat">
+                  <dt class="prop-page-hero__stat-num">Over 5,000</dt>
+                  <dd class="prop-page-hero__stat-label">
+                    successful transactions completed
+                  </dd>
+                </div>
+              </dl>
+            </div>
+            <figure class="prop-page-hero__figure">
+              <img
+                src="../assets/properties/hero-bg.png"
+                alt=""
+                width="1200"
+                height="800"
+                loading="eager"
+              />
+            </figure>
           </div>
         </div>
-      </main>
+      </section>
+      <section class="property-brand-strip" aria-label="Partner brands">
+        <div class="property-brand-strip__track">
+          <div class="property-brand-strip__item">
+            <img
+              src="../assets/properties-details/icons/loom-ledger.svg"
+              alt="Loom & Ledger"
+            />
+          </div>
+          <div class="property-brand-strip__item">
+            <img
+              src="../assets/properties-details/icons/crimson-bay.svg"
+              alt="Crimson Bay"
+            />
+          </div>
+          <div class="property-brand-strip__item">
+            <img
+              src="../assets/properties-details/icons/loom-ledger.svg"
+              alt="Loom & Ledger"
+            />
+          </div>
+          <div class="property-brand-strip__item">
+            <img
+              src="../assets/properties-details/icons/crimson-bay.svg"
+              alt="Crimson Bay"
+            />
+          </div>
+          <div class="property-brand-strip__item">
+            <img
+              src="../assets/properties-details/icons/loom-ledger.svg"
+              alt="Loom & Ledger"
+            />
+          </div>
+          <div class="property-brand-strip__item">
+            <img
+              src="../assets/properties-details/icons/crimson-bay.svg"
+              alt="Crimson Bay"
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        class="effective-services"
+        aria-labelledby="effective-services-title"
+      >
+        <div class="container-services">
+          <div class="effective-services__intro">
+            <h2 id="effective-services-title" class="effective-services__title">
+              EFFECTIVE SHOWCASE YOUR SERVICES
+            </h2>
+            <p class="effective-services__subtitle">
+              We combine market insight, modern tools, and dedicated support to
+              connect you with the right property — effortlessly and
+              efficiently.
+            </p>
+          </div>
 
-      <footer class="page-footer">
-        <div class="page-footer-inner">© <span id="y"></span> Maventa Estate</div>
-      </footer>
+          <div class="effective-services__list">
+            <article class="effective-services__card">
+              <div class="effective-services__content">
+                <h3 class="effective-services__card-title">
+                  Property Sales and Purchase Brokerage
+                </h3>
+                <p class="effective-services__card-text">
+                  Complete assistance for buying or selling apartments, houses,
+                  land, and commercial spaces.
+                </p>
+                <a href="#contact" class="effective-services__button"
+                  >Let&apos;s Talk!</a
+                >
+              </div>
+              <div class="effective-services__media">
+                <img
+                  src="../assets/services/service-card.png"
+                  alt="Modern luxury property exterior"
+                  width="1200"
+                  height="800"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <article class="effective-services__card">
+              <div class="effective-services__content">
+                <h3 class="effective-services__card-title">
+                  Rental Services (Residential &amp; Commercial)
+                </h3>
+                <p class="effective-services__card-text">
+                  Finding the right tenants quickly and managing the contractual
+                  relationship between owners and tenants.
+                </p>
+                <a href="#contact" class="effective-services__button"
+                  >Let&apos;s Talk!</a
+                >
+              </div>
+              <div class="effective-services__media">
+                <img
+                  src="../assets/services/service-card.png"
+                  alt="Elegant residential rental property"
+                  width="1200"
+                  height="800"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <article class="effective-services__card">
+              <div class="effective-services__content">
+                <h3 class="effective-services__card-title">
+                  Real Estate Evaluation and Consulting
+                </h3>
+                <p class="effective-services__card-text">
+                  Accurate property valuation and strategic advice for efficient
+                  and profitable transactions.
+                </p>
+                <a href="#contact" class="effective-services__button"
+                  >Let&apos;s Talk!</a
+                >
+              </div>
+              <div class="effective-services__media">
+                <img
+                  src="../assets/services/service-card.png"
+                  alt="Contemporary architectural property showcase"
+                  width="1200"
+                  height="800"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+            <article class="effective-services__card">
+              <div class="effective-services__content">
+                <h3 class="effective-services__card-title">
+                  Professional Property Marketing
+                </h3>
+                <p class="effective-services__card-text">
+                  High-quality photography, virtual tours, premium listings, and
+                  targeted digital marketing campaigns.
+                </p>
+                <a href="#contact" class="effective-services__button"
+                  >Let&apos;s Talk!</a
+                >
+              </div>
+              <div class="effective-services__media">
+                <img
+                  src="../assets/services/service-card.png"
+                  alt="Contemporary architectural property showcase"
+                  width="1200"
+                  height="800"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+            <article class="effective-services__card">
+              <div class="effective-services__content">
+                <h3 class="effective-services__card-title">
+                  Legal Assistance and Contract Support
+                </h3>
+                <p class="effective-services__card-text">
+                  Document verification, contract drafting, and legal consulting
+                  to ensure secure and transparent transactions.
+                </p>
+                <a href="#contact" class="effective-services__button"
+                  >Let&apos;s Talk!</a
+                >
+              </div>
+              <div class="effective-services__media">
+                <img
+                  src="../assets/services/service-card.png"
+                  alt="Contemporary architectural property showcase"
+                  width="1200"
+                  height="800"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section
+        class="consultation-section"
+        aria-labelledby="consultation-title"
+      >
+        <div class="consultation-section__container">
+          <div class="consultation-section__card">
+            <h2 id="consultation-title" class="consultation-section__title">
+              GET A FREE CONSULTATION TODAY
+            </h2>
+            <p class="consultation-section__subtitle">
+              Contact us today for a free consultation! Our specialists will
+              offer you the best personalized solutions to find your ideal home
+              or invest smartly in properties.
+            </p>
+            <form class="consultation-section__form" action="#" method="post">
+              <label class="sr-only" for="consultation-name">Name</label>
+              <input
+                id="consultation-name"
+                class="consultation-section__input"
+                type="text"
+                name="name"
+                placeholder="Name"
+                autocomplete="name"
+                required
+              />
+              <label class="sr-only" for="consultation-phone"
+                >Phone number</label
+              >
+              <input
+                id="consultation-phone"
+                class="consultation-section__input"
+                type="tel"
+                name="phone"
+                placeholder="Phone number"
+                autocomplete="tel"
+                required
+              />
+              <button class="consultation-section__button" type="submit">
+                Get a Free Consultation
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="faq-section" id="faq" aria-labelledby="faq-heading">
+        <div class="container">
+          <div class="faq-section__panel">
+            <header class="faq-section__header">
+              <h2 id="faq-heading" class="faq-section__title">
+                Frequently Asked Questions
+              </h2>
+              <p class="faq-section__intro">
+                Have questions? We have answers! Check out our FAQ section to
+                find useful information about our real estate services and
+                process.
+              </p>
+            </header>
+            <div class="faq-accordion">
+              <details class="faq-item" open>
+                <summary class="faq-item__summary">
+                  <span class="faq-item__question"
+                    >1. How can I properly value my property before I put it up
+                    for sale?</span
+                  >
+                  <span class="faq-item__icon" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-item__body">
+                  <p>
+                    Start with a comparative market analysis: review recent
+                    sales of similar homes nearby, adjust for condition and
+                    upgrades, and consider current demand. We can provide a
+                    professional valuation and pricing strategy so you list with
+                    confidence.
+                  </p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-item__summary">
+                  <span class="faq-item__question"
+                    >2. What documents do I need when buying a property?</span
+                  >
+                  <span class="faq-item__icon" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-item__body">
+                  <p>
+                    Typically you will need proof of identity, proof of funds or
+                    a mortgage pre-approval, and any documents your lender
+                    requests. We walk you through the full checklist for your
+                    specific transaction.
+                  </p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-item__summary">
+                  <span class="faq-item__question"
+                    >3. How long does it usually take to sell a home?</span
+                  >
+                  <span class="faq-item__icon" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-item__body">
+                  <p>
+                    Timeline varies by location, price, and presentation. A
+                    well-priced, well-marketed home often attracts strong
+                    interest within the first few weeks. We set clear milestones
+                    so you always know what to expect.
+                  </p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-item__summary">
+                  <span class="faq-item__question"
+                    >4. Do you help with rentals as well as sales?</span
+                  >
+                  <span class="faq-item__icon" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-item__body">
+                  <p>
+                    Yes. We support residential and commercial leases, from
+                    marketing and tenant screening to lease agreements and
+                    handover.
+                  </p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-item__summary">
+                  <span class="faq-item__question"
+                    >5. Can you assist with staging and photography?</span
+                  >
+                  <span class="faq-item__icon" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-item__body">
+                  <p>
+                    We coordinate professional photography and can recommend
+                    staging options so your property makes a strong first
+                    impression online and in person.
+                  </p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-item__summary">
+                  <span class="faq-item__question"
+                    >6. How do I schedule a viewing?</span
+                  >
+                  <span class="faq-item__icon" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-item__body">
+                  <p>
+                    Contact us by phone, email, or the form on this page. We
+                    will confirm a time that works for you and prepare
+                    everything needed for the visit.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="contact-section"
+        id="contact"
+        aria-labelledby="contact-heading"
+      >
+        <div class="container contact-section__inner">
+          <div class="contact-section__info">
+            <h2 id="contact-heading" class="contact-section__title">
+              Contact Us
+            </h2>
+            <p class="contact-section__lead">
+              We are here for you! Contact us with any questions or to discuss
+              your real estate needs. Our team of experts is ready to help you.
+            </p>
+            <h3 class="contact-section__subhead">Office location</h3>
+            <ul class="contact-section__list">
+              <li class="contact-section__row">
+                <span class="contact-section__icon" aria-hidden="true">
+                  <img src="/assets/icons/phone.svg" />
+                </span>
+                <a class="contact-section__link" href="tel:+12125550187">
+                  <span style="font-weight: bold">Phone:</span>
+                  +1 (212) 555-0187
+                </a>
+              </li>
+              <li class="contact-section__row">
+                <span class="contact-section__icon" aria-hidden="true">
+                  <img src="/assets/icons/email.svg" />
+                </span>
+                <a
+                  class="contact-section__link"
+                  href="mailto:contact@maventa.com"
+                >
+                  <span style="font-weight: bold">Email: </span
+                  >contact@maventa.com</a
+                >
+              </li>
+              <li class="contact-section__row">
+                <span class="contact-section__icon" aria-hidden="true">
+                  <img src="/assets/icons/address.svg" />
+                </span>
+                <span class="contact-section__text">
+                  <a
+                    href="https://www.google.com/maps?q=1234+Madison+Avenue,+Suite+500,+New+York,+NY+10022,+USA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span style="font-weight: bold">Address: </span>
+                    1234 Madison Avenue, Suite 500, New York, NY 10022, United
+                    States
+                  </a>
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="contact-section__form-wrap">
+            <form class="contact-section__form" action="#" method="post">
+              <label class="sr-only" for="contact-name">Name</label>
+              <input
+                id="contact-name"
+                class="contact-section__input"
+                type="text"
+                name="name"
+                placeholder="Name"
+                autocomplete="name"
+                required
+              />
+              <label class="sr-only" for="contact-phone">Phone number</label>
+              <input
+                id="contact-phone"
+                class="contact-section__input"
+                type="tel"
+                name="phone"
+                placeholder="Phone number"
+                autocomplete="tel"
+              />
+              <label class="sr-only" for="contact-message">Message</label>
+              <textarea
+                id="contact-message"
+                class="contact-section__textarea"
+                name="message"
+                rows="5"
+                placeholder="Leave your detailed message..."
+                required
+              ></textarea>
+              <button type="submit" class="contact-section__submit">
+                Submit!
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
     </div>
+
+    <footer class="site-footer">
+      <div class="site-footer__curve" aria-hidden="true"></div>
+      <div class="container site-footer__top">
+        <div class="site-footer__cta-copy">
+          <h2 class="site-footer__cta-title">Ready To Work With Us?</h2>
+          <p class="site-footer__cta-text">
+            Starting a real estate journey can seem overwhelming, but it doesn’t
+            have to be! Our team of experts is here to guide you every step of
+            the way. Whether you’re looking for your ideal home, looking to
+            invest in property, or need advice on selling, we’re ready to offer
+            you customized solutions to suit your specific needs. Contact us
+            today and let’s discuss how we can turn your vision into reality!
+          </p>
+        </div>
+        <a
+          href="#contact"
+          class="site-footer__cta-btn"
+          aria-label="Go to contact form"
+        >
+          <img src="/assets/icons/arrow-right-up.svg" />
+        </a>
+      </div>
+      <div class="container site-footer__meta">
+        <p class="site-footer__col site-footer__address">
+          <a
+            href="https://maps.google.com/?q=1234+Madison+Avenue,+Suite+500,+New+York,+NY+10022,+United+States"
+            target="_blank"
+            rel="noreferrer"
+          >
+            1234 Madison Avenue, Suite 500, New York, NY 10022, United States
+          </a>
+        </p>
+        <div class="site-footer__col site-footer__reach">
+          <a href="tel:+12125550187">+1 (212) 555-0187</a>
+          <a href="mailto:contact@maventa.com">contact@maventa.com</a>
+        </div>
+        <p class="site-footer__col site-footer__legal">
+          All rights reserved © <span id="footer-year">© 2026</span>, Maventa.
+          Created by
+          <a href="https://sykors.com" target="_blank" rel="noreferrer"
+            >Sykors Media</a
+          >
+        </p>
+        <div class="site-footer__col site-footer__social">
+          <a href="#" class="site-footer__social-link">Facebook</a>
+          <a href="#" class="site-footer__social-link">Instagram</a>
+          <a href="#" class="site-footer__social-link">X (Twitter)</a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="site-footer-logo">
+          <img src="../assets/home/MAVENTA.svg" />
+        </div>
+      </div>
+    </footer>
 
     <script defer src="../js/main.js"></script>
   </body>
