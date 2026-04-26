@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,42 +12,46 @@
     />
     <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/design-system.css" />
-    <link rel="stylesheet" href="../styles/pages.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/properties.css" />
     <link rel="stylesheet" href="../styles/home.css" />
-    <link rel="stylesheet" href="../styles/properties-page.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
   </head>
   <body class="properties-page">
     <div class="page-shell page-shell--properties">
       <section class="prop-page-hero" aria-labelledby="prop-hero-title">
-        <div class="prop-page-hero__inner">
-          <div class="page-header-inner prop-page-hero__bar">
-            <a class="page-brand" href="home.html">
-              <img src="../assets/Logo.png" alt="Maventa Estate — home" width="40" height="40" />
+        <div class="container">
+          <header class="hero-header-container">
+            <a href="../index.html" class="hero-logo">
+              <img src="../assets/Logo.png" alt="Maventa Estate Logo" />
             </a>
-
-            <nav class="page-nav" id="page-navigation" aria-label="Primary">
-              <a href="home.html" class="page-nav-link">Home</a>
-              <a href="properties.html" class="page-nav-link" aria-current="page">Properties</a>
-              <a href="services.html" class="page-nav-link">Services</a>
-              <a href="about.html" class="page-nav-link">About Us</a>
-              <a href="team.html" class="page-nav-link">Team</a>
-            </nav>
-
-            <div class="prop-page-hero__end">
+            <div class="hero-nav-shell">
               <button
                 type="button"
-                class="page-mobile-menu-btn"
+                class="mobile-menu-btn"
                 aria-label="Toggle menu"
-                aria-controls="page-navigation"
+                aria-controls="hero-main-nav"
                 aria-expanded="false"
               >
                 <span></span>
                 <span></span>
                 <span></span>
               </button>
-              <a href="#property-results" class="prop-page-hero__cta">LET'S TALK!</a>
+              <nav id="hero-main-nav" class="hero-nav" aria-label="Primary">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a
+                  href="properties.html"
+                  class="nav-link active"
+                  aria-current="page"
+                  >Properties</a
+                >
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="team.html" class="nav-link">Team</a>
+              </nav>
             </div>
-          </div>
+            <a href="#contact" class="btn-talk">LET'S TALK!</a>
+          </header>
 
           <div class="prop-page-hero__body">
             <div class="prop-page-hero__copy">
@@ -55,7 +59,8 @@
                 Discover the Best Properties on the Market
               </h1>
               <p class="prop-page-hero__subtitle">
-                Browse verified listings and find the right space with guidance from our experienced team.
+                From cozy apartments to luxury villas — find your next home
+                effortlessly.
               </p>
               <dl class="prop-page-hero__stats">
                 <div class="prop-page-hero__stat">
@@ -70,7 +75,7 @@
             </div>
             <figure class="prop-page-hero__figure">
               <img
-                src="../assets/home/FirstSectionBg.png"
+                src="../assets/properties/hero-bg.png"
                 alt=""
                 width="1200"
                 height="800"
@@ -82,337 +87,797 @@
       </section>
 
       <main>
-        <section class="prop-listing-intro" aria-labelledby="prop-listing-heading">
+        <!-- Discover Home -->
+        <section
+          class="properties-section"
+          id="discover-perfect-home"
+          aria-labelledby="properties-section-heading"
+        >
           <div class="container">
-            <h2 id="prop-listing-heading" class="prop-listing-intro__title">
-              DISCOVER HOMES TAILORED TO YOUR LIFESTYLE AND NEEDS
-            </h2>
-            <p class="prop-listing-intro__subtitle">
-              Explore a diverse selection of properties to suit every lifestyle. Whether you are looking for a modern home or a centrally located apartment, we have options for all your needs.
-            </p>
-          </div>
-        </section>
+            <header class="properties-section__header">
+              <h2
+                id="properties-section-heading"
+                class="properties-section__title"
+              >
+                Discover homes tailored to your lifestyle and needs
+              </h2>
+              <p class="properties-section__intro">
+                Explore a diverse selection of properties to suit every
+                lifestyle. Whether you're looking for a modern home or a
+                centrally located apartment, we have options for all your needs.
+              </p>
+            </header>
 
-        <section class="prop-listing-columns" aria-label="Property listings">
-          <div class="container prop-listing-columns__inner">
-            <section class="properties-section prop-listing-embed" id="property-results">
-              <div class="properties-section__filters" role="toolbar" aria-label="Property type filters">
-                <button type="button" class="properties-section__filter properties-section__filter--active" aria-pressed="true">All</button>
-                <button type="button" class="properties-section__filter" aria-pressed="false">Apartments</button>
-                <button type="button" class="properties-section__filter" aria-pressed="false">Homes</button>
-                <button type="button" class="properties-section__filter" aria-pressed="false">Offices</button>
-                <button type="button" class="properties-section__filter" aria-pressed="false">Commercial</button>
-                <button type="button" class="properties-section__filter" aria-pressed="false">Industrial</button>
-                <button type="button" class="properties-section__filter" aria-pressed="false">Lands</button>
-                <button type="button" class="properties-section__filter" aria-pressed="false">Luxury Properties</button>
-                <button type="button" class="properties-section__filter" aria-pressed="false">For Rent</button>
-                <button type="button" class="properties-section__filter" aria-pressed="false">For Sale</button>
-              </div>
+            <div
+              class="properties-section__filters"
+              role="toolbar"
+              aria-label="Property type filters"
+            >
+              <button
+                type="button"
+                class="properties-section__filter properties-section__filter--active"
+                aria-pressed="true"
+              >
+                All
+              </button>
+              <button
+                type="button"
+                class="properties-section__filter"
+                aria-pressed="false"
+              >
+                Apartments
+              </button>
+              <button
+                type="button"
+                class="properties-section__filter"
+                aria-pressed="false"
+              >
+                Homes
+              </button>
+              <button
+                type="button"
+                class="properties-section__filter"
+                aria-pressed="false"
+              >
+                Offices
+              </button>
+              <button
+                type="button"
+                class="properties-section__filter"
+                aria-pressed="false"
+              >
+                Commercial
+              </button>
+              <button
+                type="button"
+                class="properties-section__filter"
+                aria-pressed="false"
+              >
+                Industrial
+              </button>
+              <button
+                type="button"
+                class="properties-section__filter"
+                aria-pressed="false"
+              >
+                Lands
+              </button>
+              <button
+                type="button"
+                class="properties-section__filter"
+                aria-pressed="false"
+              >
+                Luxury Properties
+              </button>
+            </div>
 
-              <div class="properties-section__grid">
-                <article class="property-card">
-                  <figure class="property-card__media">
-                    <img
-                      class="property-card__image"
-                      src="../assets/properties/Rustic.png"
-                      width="800"
-                      height="500"
-                      alt="Spacious living room with leather sofa and warm lighting"
-                      loading="lazy"
-                    />
-                  </figure>
-                  <div class="property-card__row">
-                    <span class="property-card__price">$2,500/mo</span>
-                    <span class="property-card__badge property-card__badge--rent">For Rent</span>
-                  </div>
-                  <div class="property-card__body">
-                    <h3 class="property-card__name">Rustic Ranch House</h3>
-                    <p class="property-card__description">Fully furnished studio with natural light, modern kitchen, and easy access to public transport. Ideal for young professionals.</p>
-                    <a class="property-card__more" href="property-details.html">View More</a>
-                  </div>
-                </article>
-                <article class="property-card">
-                  <figure class="property-card__media">
-                    <img
-                      class="property-card__image"
-                      src="../assets/properties/Luxury.png"
-                      width="800"
-                      height="500"
-                      alt="Bright bedroom with minimalist decor"
-                      loading="lazy"
-                    />
-                  </figure>
-                  <div class="property-card__row">
-                    <span class="property-card__price">$310,500</span>
-                    <span class="property-card__badge property-card__badge--sale">For Sale</span>
-                  </div>
-                  <div class="property-card__body">
-                    <h3 class="property-card__name">Luxury Villa with Ocean View</h3>
-                    <p class="property-card__description">A spacious 4-bedroom house with an open-concept kitchen, large backyard, and two-car garage — perfect for family life.</p>
-                    <a class="property-card__more" href="property-details.html">View More</a>
-                  </div>
-                </article>
-                <article class="property-card">
-                  <figure class="property-card__media">
-                    <img
-                      class="property-card__image"
-                      src="../assets/properties/Contemporary.png"
-                      width="800"
-                      height="500"
-                      alt="Contemporary home office with plants and natural wood"
-                      loading="lazy"
-                    />
-                  </figure>
-                  <div class="property-card__row">
-                    <span class="property-card__price">$250,500</span>
-                    <span class="property-card__badge property-card__badge--sale">For Sale</span>
-                  </div>
-                  <div class="property-card__body">
-                    <h3 class="property-card__name">Contemporary House in Austin</h3>
-                    <p class="property-card__description">Stylish 3-bedroom home with clean lines, minimalist interior, and solar panels. Located in a quiet residential area close to schools and parks.</p>
-                    <a class="property-card__more" href="property-details.html">View More</a>
-                  </div>
-                </article>
-                <article class="property-card">
-                  <figure class="property-card__media">
-                    <img
-                      class="property-card__image"
-                      src="../assets/properties/3-Bedroom.png"
-                      width="800"
-                      height="500"
-                      alt="Family living area with seating and natural light"
-                      loading="lazy"
-                    />
-                  </figure>
-                  <div class="property-card__row">
-                    <span class="property-card__price">$3,500/mo</span>
-                    <span class="property-card__badge property-card__badge--rent">For Rent</span>
-                  </div>
-                  <div class="property-card__body">
-                    <h3 class="property-card__name">3-Bedroom Family Home</h3>
-                    <p class="property-card__description">Comfortable and bright, this rental home offers a fenced backyard, large living room, and a quiet neighborhood — pet friendly.</p>
-                    <a class="property-card__more" href="property-details.html">View More</a>
-                  </div>
-                </article>
-                <article class="property-card">
-                  <figure class="property-card__media">
-                    <img
-                      class="property-card__image"
-                      src="../assets/properties/Downtown.png"
-                      width="800"
-                      height="500"
-                      alt="Open loft-style interior with desk area"
-                      loading="lazy"
-                    />
-                  </figure>
-                  <div class="property-card__row">
-                    <span class="property-card__price">$200,000</span>
-                    <span class="property-card__badge property-card__badge--sale">For Sale</span>
-                  </div>
-                  <div class="property-card__body">
-                    <h3 class="property-card__name">Downtown Chicago Loft</h3>
-                    <p class="property-card__description">Spacious loft with high ceilings and a renovated interior. Perfect for creatives and professionals seeking a modern lifestyle.</p>
-                    <a class="property-card__more" href="property-details.html">View More</a>
-                  </div>
-                </article>
-                <article class="property-card">
-                  <figure class="property-card__media">
-                    <img
-                      class="property-card__image"
-                      src="../assets/properties/Cozy.png"
-                      width="800"
-                      height="500"
-                      alt="Cozy living space with sofa and soft lighting"
-                      loading="lazy"
-                    />
-                  </figure>
-                  <div class="property-card__row">
-                    <span class="property-card__price">$350,000</span>
-                    <span class="property-card__badge property-card__badge--sale">For Sale</span>
-                  </div>
-                  <div class="property-card__body">
-                    <h3 class="property-card__name">Cozy Cottage Near Lake Tahoe</h3>
-                    <p class="property-card__description">Charming 2-bedroom cottage surrounded by nature, ideal for vacation stays or rental. Includes a fireplace and a private garden.</p>
-                    <a class="property-card__more" href="property-details.html">View More</a>
-                  </div>
-                </article>
-              </div>
-
-              <nav class="properties-section__pagination" aria-label="Main results pagination">
-                <button type="button" class="properties-pagination__btn" disabled aria-disabled="true">Previous</button>
-                <div class="properties-pagination__pages">
-                  <button type="button" class="properties-pagination__page properties-pagination__page--active" aria-current="page">1</button>
-                  <button type="button" class="properties-pagination__page">2</button>
-                  <button type="button" class="properties-pagination__page">3</button>
-                  <span class="properties-pagination__ellipsis" aria-hidden="true">…</span>
-                  <button type="button" class="properties-pagination__page">8</button>
-                  <button type="button" class="properties-pagination__page">9</button>
+            <div class="properties-section__grid">
+              <article class="property-card">
+                <figure class="property-card__media">
+                  <img
+                    class="property-card__image"
+                    src="../assets/properties/rustic.jpg"
+                    width="800"
+                    height="500"
+                    alt="Spacious living room with leather sofa and warm lighting"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="property-card__row">
+                  <span class="property-card__price">$2,500/mo</span>
+                  <span class="property-card__badge property-card__badge--rent"
+                    >For Rent</span
+                  >
                 </div>
-                <button type="button" class="properties-pagination__btn">Next</button>
-              </nav>
-            
-                <button type="button" class="properties-pagination__btn">Next</button>
-              </nav>
-            </aside>
+                <div class="property-card__body">
+                  <h3 class="property-card__name">Rustic Ranch House</h3>
+                  <p class="property-card__description">
+                    Fully furnished studio with natural light, modern kitchen,
+                    and easy access to public transport. Ideal for young
+                    professionals.
+                  </p>
+                  <a
+                    class="property-card__more"
+                    href="pages/property-details.html"
+                    >View More</a
+                  >
+                </div>
+              </article>
+              <article class="property-card">
+                <figure class="property-card__media">
+                  <img
+                    class="property-card__image"
+                    src="../assets/properties/luxury.jpg"
+                    width="800"
+                    height="500"
+                    alt="Bright bedroom with minimalist decor"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="property-card__row">
+                  <span class="property-card__price">$310,500</span>
+                  <span class="property-card__badge property-card__badge--sale"
+                    >For Sale</span
+                  >
+                </div>
+                <div class="property-card__body">
+                  <h3 class="property-card__name">
+                    Luxury Villa with Ocean View
+                  </h3>
+                  <p class="property-card__description">
+                    A spacious 4-bedroom house with an open-concept kitchen,
+                    large backyar, and two-car garage - perfect for family life.
+                  </p>
+                  <a
+                    class="property-card__more"
+                    href="pages/property-details.html"
+                    >View More</a
+                  >
+                </div>
+              </article>
+              <article class="property-card">
+                <figure class="property-card__media">
+                  <img
+                    class="property-card__image"
+                    src="../assets/properties/contemporary.jpg"
+                    width="800"
+                    height="500"
+                    alt="Contemporary home office with plants and natural wood"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="property-card__row">
+                  <span class="property-card__price">$250,500</span>
+                  <span class="property-card__badge property-card__badge--sale"
+                    >For Sale</span
+                  >
+                </div>
+                <div class="property-card__body">
+                  <h3 class="property-card__name">
+                    Contemporary House in Austin
+                  </h3>
+                  <p class="property-card__description">
+                    Stylish 3-bedroom home with clean lines, minimalist
+                    interior, and solar panels. Located in a quiet residential
+                    area close to schools and parks.
+                  </p>
+                  <a
+                    class="property-card__more"
+                    href="pages/property-details.html"
+                    >View More</a
+                  >
+                </div>
+              </article>
+              <article class="property-card">
+                <figure class="property-card__media">
+                  <img
+                    class="property-card__image"
+                    src="../assets/properties/bedroom.jpg"
+                    width="800"
+                    height="500"
+                    alt="Family living area with seating and natural light"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="property-card__row">
+                  <span class="property-card__price">$3,500/mo</span>
+                  <span class="property-card__badge property-card__badge--rent"
+                    >For Rent</span
+                  >
+                </div>
+                <div class="property-card__body">
+                  <h3 class="property-card__name">3-Bedroom Family Home</h3>
+                  <p class="property-card__description">
+                    Comfortable and bright, this rental home offers a fenced
+                    backyard, large living room, and a quiet neighborhood — pet
+                    friendly.
+                  </p>
+                  <a
+                    class="property-card__more"
+                    href="pages/property-details.html"
+                    >View More</a
+                  >
+                </div>
+              </article>
+              <article class="property-card">
+                <figure class="property-card__media">
+                  <img
+                    class="property-card__image"
+                    src="../assets/properties/downtown.jpg"
+                    width="800"
+                    height="500"
+                    alt="Open loft-style interior with desk area"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="property-card__row">
+                  <span class="property-card__price">$200,000</span>
+                  <span class="property-card__badge property-card__badge--sale"
+                    >For Sale</span
+                  >
+                </div>
+                <div class="property-card__body">
+                  <h3 class="property-card__name">Downtown Chicago Loft</h3>
+                  <p class="property-card__description">
+                    Spacious loft with walls, high ceilings, and a renovated
+                    interior. Perfect for creatives and professionals seeking a
+                    modern lifestyle
+                  </p>
+                  <a
+                    class="property-card__more"
+                    href="pages/property-details.html"
+                    >View More</a
+                  >
+                </div>
+              </article>
+              <article class="property-card">
+                <figure class="property-card__media">
+                  <img
+                    class="property-card__image"
+                    src="../assets/properties/cozy.jpg"
+                    width="800"
+                    height="500"
+                    alt="Cozy living space with sofa and soft lighting"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="property-card__row">
+                  <span class="property-card__price">$350,000</span>
+                  <span class="property-card__badge property-card__badge--sale"
+                    >For Sale</span
+                  >
+                </div>
+                <div class="property-card__body">
+                  <h3 class="property-card__name">
+                    Cozy Cottage Near Lake Tahoe
+                  </h3>
+                  <p class="property-card__description">
+                    Charming 2-bedroom cottage surrounded by nature, ideal for
+                    vacations stays or Airbnb rental. Includes a fireplace and a
+                    private garden.
+                  </p>
+                  <a
+                    class="property-card__more"
+                    href="pages/property-details.html"
+                    >View More</a
+                  >
+                </div>
+              </article>
+              <article class="property-card">
+                <figure class="property-card__media">
+                  <img
+                    class="property-card__image"
+                    src="../assets/properties/downtown.jpg"
+                    width="800"
+                    height="500"
+                    alt="Open loft-style interior with desk area"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="property-card__row">
+                  <span class="property-card__price">$200,000</span>
+                  <span class="property-card__badge property-card__badge--sale"
+                    >For Sale</span
+                  >
+                </div>
+                <div class="property-card__body">
+                  <h3 class="property-card__name">Downtown Chicago Loft</h3>
+                  <p class="property-card__description">
+                    Spacious loft with walls, high ceilings, and a renovated
+                    interior. Perfect for creatives and professionals seeking a
+                    modern lifestyle
+                  </p>
+                  <a
+                    class="property-card__more"
+                    href="pages/property-details.html"
+                    >View More</a
+                  >
+                </div>
+              </article>
+              <article class="property-card">
+                <figure class="property-card__media">
+                  <img
+                    class="property-card__image"
+                    src="../assets/properties/bedroom.jpg"
+                    width="800"
+                    height="500"
+                    alt="Family living area with seating and natural light"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="property-card__row">
+                  <span class="property-card__price">$3,500/mo</span>
+                  <span class="property-card__badge property-card__badge--rent"
+                    >For Rent</span
+                  >
+                </div>
+                <div class="property-card__body">
+                  <h3 class="property-card__name">3-Bedroom Family Home</h3>
+                  <p class="property-card__description">
+                    Comfortable and bright, this rental home offers a fenced
+                    backyard, large living room, and a quiet neighborhood — pet
+                    friendly.
+                  </p>
+                  <a
+                    class="property-card__more"
+                    href="pages/property-details.html"
+                    >View More</a
+                  >
+                </div>
+              </article>
+              <article class="property-card">
+                <figure class="property-card__media">
+                  <img
+                    class="property-card__image"
+                    src="../assets/properties/contemporary.jpg"
+                    width="800"
+                    height="500"
+                    alt="Contemporary home office with plants and natural wood"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="property-card__row">
+                  <span class="property-card__price">$250,500</span>
+                  <span class="property-card__badge property-card__badge--sale"
+                    >For Sale</span
+                  >
+                </div>
+                <div class="property-card__body">
+                  <h3 class="property-card__name">
+                    Contemporary House in Austin
+                  </h3>
+                  <p class="property-card__description">
+                    Stylish 3-bedroom home with clean lines, minimalist
+                    interior, and solar panels. Located in a quiet residential
+                    area close to schools and parks.
+                  </p>
+                  <a
+                    class="property-card__more"
+                    href="pages/property-details.html"
+                    >View More</a
+                  >
+                </div>
+              </article>
+              <article class="property-card">
+                <figure class="property-card__media">
+                  <img
+                    class="property-card__image"
+                    src="../assets/properties/rustic.jpg"
+                    width="800"
+                    height="500"
+                    alt="Spacious living room with leather sofa and warm lighting"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="property-card__row">
+                  <span class="property-card__price">$2,500/mo</span>
+                  <span class="property-card__badge property-card__badge--rent"
+                    >For Rent</span
+                  >
+                </div>
+                <div class="property-card__body">
+                  <h3 class="property-card__name">Rustic Ranch House</h3>
+                  <p class="property-card__description">
+                    Fully furnished studio with natural light, modern kitchen,
+                    and easy access to public transport. Ideal for young
+                    professionals.
+                  </p>
+                  <a
+                    class="property-card__more"
+                    href="pages/property-details.html"
+                    >View More</a
+                  >
+                </div>
+              </article>
+              <article class="property-card">
+                <figure class="property-card__media">
+                  <img
+                    class="property-card__image"
+                    src="../assets/properties/cozy.jpg"
+                    width="800"
+                    height="500"
+                    alt="Cozy living space with sofa and soft lighting"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="property-card__row">
+                  <span class="property-card__price">$350,000</span>
+                  <span class="property-card__badge property-card__badge--sale"
+                    >For Sale</span
+                  >
+                </div>
+                <div class="property-card__body">
+                  <h3 class="property-card__name">
+                    Cozy Cottage Near Lake Tahoe
+                  </h3>
+                  <p class="property-card__description">
+                    Charming 2-bedroom cottage surrounded by nature, ideal for
+                    vacations stays or Airbnb rental. Includes a fireplace and a
+                    private garden.
+                  </p>
+                  <a
+                    class="property-card__more"
+                    href="pages/property-details.html"
+                    >View More</a
+                  >
+                </div>
+              </article>
+              <article class="property-card">
+                <figure class="property-card__media">
+                  <img
+                    class="property-card__image"
+                    src="../assets/properties/luxury.jpg"
+                    width="800"
+                    height="500"
+                    alt="Bright bedroom with minimalist decor"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="property-card__row">
+                  <span class="property-card__price">$310,500</span>
+                  <span class="property-card__badge property-card__badge--sale"
+                    >For Sale</span
+                  >
+                </div>
+                <div class="property-card__body">
+                  <h3 class="property-card__name">
+                    Luxury Villa with Ocean View
+                  </h3>
+                  <p class="property-card__description">
+                    A spacious 4-bedroom house with an open-concept kitchen,
+                    large backyar, and two-car garage - perfect for family life.
+                  </p>
+                  <a
+                    class="property-card__more"
+                    href="pages/property-details.html"
+                    >View More</a
+                  >
+                </div>
+              </article>
+            </div>
           </div>
+          <!-- Navigation -->
+          <nav
+            class="properties-section__pagination"
+            aria-label="Main results pagination"
+          >
+            <button
+              type="button"
+              class="properties-pagination__btn"
+              disabled
+              aria-disabled="true"
+            >
+              <div style="display: flex; align-items: center; gap: 5px">
+                <img src="../assets/icons/arrow-left.svg" />
+                <span>Previous</span>
+              </div>
+            </button>
+            <div class="properties-pagination__pages">
+              <button
+                type="button"
+                class="properties-pagination__page properties-pagination__page--active"
+                aria-current="page"
+              >
+                1
+              </button>
+              <button type="button" class="properties-pagination__page">
+                2
+              </button>
+              <button type="button" class="properties-pagination__page">
+                3
+              </button>
+              <span class="properties-pagination__ellipsis" aria-hidden="true"
+                >…</span
+              >
+              <button type="button" class="properties-pagination__page">
+                9
+              </button>
+              <button type="button" class="properties-pagination__page">
+                10
+              </button>
+            </div>
+            <button type="button" class="properties-pagination__btn">
+              <div style="display: flex; align-items: center; gap: 5px">
+                <span>Next</span>
+                <img src="../assets/icons/arrow-right.svg" />
+              </div>
+            </button>
+          </nav>
         </section>
 
         <section class="faq-section" id="faq" aria-labelledby="faq-heading">
-            <div class="container">
-                <div class="faq-section__panel">
-                    <header class="faq-section__header">
-                        <h2 id="faq-heading" class="faq-section__title">FREQUENTLY ASKED QUESTIONS</h2>
-                        <p class="faq-section__intro">
-                            Clear answers about buying, selling, and working with Maventa — open any topic below.
-                        </p>
-                    </header>
-                    <div class="faq-accordion">
-                        <details class="faq-item" open>
-                            <summary class="faq-item__summary">
-                                <span class="faq-item__question">1. How can I properly value my property before I put it up for sale?</span>
-                                <span class="faq-item__icon" aria-hidden="true"></span>
-                            </summary>
-                            <div class="faq-item__body">
-                                <p>
-                                    We recommend a comparative market analysis of recent sales near you, plus adjustments for condition, upgrades, and timing. Our agents can prepare a professional valuation and a pricing strategy tailored to your goals.
-                                </p>
-                            </div>
-                        </details>
-                        <details class="faq-item">
-                            <summary class="faq-item__summary">
-                                <span class="faq-item__question">2. What are the steps to buy a property through the agency?</span>
-                                <span class="faq-item__icon" aria-hidden="true"></span>
-                            </summary>
-                            <div class="faq-item__body">
-                                <p>
-                                    Typically: define your budget and preferences, view shortlisted properties, make an offer, complete due diligence and financing, then sign contracts and close. We guide you at each step and coordinate with lenders and legal counsel as needed.
-                                </p>
-                            </div>
-                        </details>
-                        <details class="faq-item">
-                            <summary class="faq-item__summary">
-                                <span class="faq-item__question">3. What documents are required to conclude a real estate transaction?</span>
-                                <span class="faq-item__icon" aria-hidden="true"></span>
-                            </summary>
-                            <div class="faq-item__body">
-                                <p>
-                                    Common requirements include proof of identity, title and survey documents, disclosure forms, purchase agreement, and lender paperwork when a mortgage is involved. We provide a checklist specific to your sale or purchase.
-                                </p>
-                            </div>
-                        </details>
-                        <details class="faq-item">
-                            <summary class="faq-item__summary">
-                                <span class="faq-item__question">4. Does the agency offer rental property management services?</span>
-                                <span class="faq-item__icon" aria-hidden="true"></span>
-                            </summary>
-                            <div class="faq-item__body">
-                                <p>
-                                    Yes. We can help market your rental, screen tenants, prepare leases, and coordinate ongoing management tasks so landlords and tenants have a smooth experience.
-                                </p>
-                            </div>
-                        </details>
-                        <details class="faq-item">
-                            <summary class="faq-item__summary">
-                                <span class="faq-item__question">5. How can I schedule a viewing of a property?</span>
-                                <span class="faq-item__icon" aria-hidden="true"></span>
-                            </summary>
-                            <div class="faq-item__body">
-                                <p>
-                                    Call us, email, or use the contact form on this page with the property reference and your preferred times. We will confirm an appointment and send any access details you need.
-                                </p>
-                            </div>
-                        </details>
-                        <details class="faq-item">
-                            <summary class="faq-item__summary">
-                                <span class="faq-item__question">6. What commission does the agency charge for brokerage services?</span>
-                                <span class="faq-item__icon" aria-hidden="true"></span>
-                            </summary>
-                            <div class="faq-item__body">
-                                <p>
-                                    Commission structures depend on the type of transaction and local market practice. We explain fees upfront in writing so there are no surprises before you sign a representation agreement.
-                                </p>
-                            </div>
-                        </details>
-                    </div>
-                </div>
+          <div class="container">
+            <div class="faq-section__panel">
+              <header class="faq-section__header">
+                <h2 id="faq-heading" class="faq-section__title">
+                  FREQUENTLY ASKED QUESTIONS
+                </h2>
+                <p class="faq-section__intro">
+                  Have questions? We have answers! Check out our FAQ section to
+                  find useful information about our real estate services and
+                  process.
+                </p>
+              </header>
+              <div class="faq-accordion">
+                <details class="faq-item" open>
+                  <summary class="faq-item__summary">
+                    <span class="faq-item__question"
+                      >1. How can I properly value my property before I put it
+                      up for sale?</span
+                    >
+                    <span class="faq-item__icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="faq-item__body">
+                    <p>
+                      To properly assess the value of your property before
+                      selling it, it is important to analyze similar properties
+                      in the area and consider the overall condition of the
+                      home. A professional appraisal from a certified appraiser
+                      can provide an objective estimate, and consulting with
+                      local real estate agents will give you valuable
+                      information about market trends.
+                    </p>
+                  </div>
+                </details>
+                <details class="faq-item">
+                  <summary class="faq-item__summary">
+                    <span class="faq-item__question"
+                      >2. What are the steps to buy a property through the
+                      agency?</span
+                    >
+                    <span class="faq-item__icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="faq-item__body">
+                    <p>
+                      Typically: define your budget and preferences, view
+                      shortlisted properties, make an offer, complete due
+                      diligence and financing, then sign contracts and close. We
+                      guide you at each step and coordinate with lenders and
+                      legal counsel as needed.
+                    </p>
+                  </div>
+                </details>
+                <details class="faq-item">
+                  <summary class="faq-item__summary">
+                    <span class="faq-item__question"
+                      >3. What documents are required to conclude a real estate
+                      transaction?</span
+                    >
+                    <span class="faq-item__icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="faq-item__body">
+                    <p>
+                      Common requirements include proof of identity, title and
+                      survey documents, disclosure forms, purchase agreement,
+                      and lender paperwork when a mortgage is involved. We
+                      provide a checklist specific to your sale or purchase.
+                    </p>
+                  </div>
+                </details>
+                <details class="faq-item">
+                  <summary class="faq-item__summary">
+                    <span class="faq-item__question"
+                      >4. Does the agency offer rental property management
+                      services?</span
+                    >
+                    <span class="faq-item__icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="faq-item__body">
+                    <p>
+                      Yes. We can help market your rental, screen tenants,
+                      prepare leases, and coordinate ongoing management tasks so
+                      landlords and tenants have a smooth experience.
+                    </p>
+                  </div>
+                </details>
+                <details class="faq-item">
+                  <summary class="faq-item__summary">
+                    <span class="faq-item__question"
+                      >5. How can I schedule a viewing of a property?</span
+                    >
+                    <span class="faq-item__icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="faq-item__body">
+                    <p>
+                      Call us, email, or use the contact form on this page with
+                      the property reference and your preferred times. We will
+                      confirm an appointment and send any access details you
+                      need.
+                    </p>
+                  </div>
+                </details>
+                <details class="faq-item">
+                  <summary class="faq-item__summary">
+                    <span class="faq-item__question"
+                      >6. What commission does the agency charge for brokerage
+                      services?</span
+                    >
+                    <span class="faq-item__icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="faq-item__body">
+                    <p>
+                      Commission structures depend on the type of transaction
+                      and local market practice. We explain fees upfront in
+                      writing so there are no surprises before you sign a
+                      representation agreement.
+                    </p>
+                  </div>
+                </details>
+              </div>
             </div>
+          </div>
         </section>
 
-        <section class="contact-section" id="contact" aria-labelledby="contact-heading">
-            <div class="container contact-section__inner">
-                <div class="contact-section__info">
-                    <h2 id="contact-heading" class="contact-section__title">Contact Us</h2>
-                    <p class="contact-section__lead">
-                        Whether you are buying, selling, or exploring options, we are here to help. Reach out and we will respond as soon as possible.
-                    </p>
-                    <h3 class="contact-section__subhead">Office location</h3>
-                    <ul class="contact-section__list">
-                        <li class="contact-section__row">
-                            <span class="contact-section__icon" aria-hidden="true">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            </span>
-                            <a class="contact-section__link" href="tel:+12125550187">+1 (212) 555-0187</a>
-                        </li>
-                        <li class="contact-section__row">
-                            <span class="contact-section__icon" aria-hidden="true">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5"/><path d="m22 6-10 7L2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            </span>
-                            <a class="contact-section__link" href="mailto:contact@maventa.com">contact@maventa.com</a>
-                        </li>
-                        <li class="contact-section__row">
-                            <span class="contact-section__icon" aria-hidden="true">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
-                            </span>
-                            <span class="contact-section__text">1234 Madison Avenue, Suite 500, New York, NY 10022, United States</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="contact-section__form-wrap">
-                    <form class="contact-section__form" action="#" method="post">
-                        <label class="sr-only" for="contact-name">Name</label>
-                        <input id="contact-name" class="contact-section__input" type="text" name="name" placeholder="Name" autocomplete="name" required>
-                        <label class="sr-only" for="contact-phone">Phone number</label>
-                        <input id="contact-phone" class="contact-section__input" type="tel" name="phone" placeholder="Phone number" autocomplete="tel">
-                        <label class="sr-only" for="contact-message">Message</label>
-                        <textarea id="contact-message" class="contact-section__textarea" name="message" rows="5" placeholder="Leave your detailed message..." required></textarea>
-                        <button type="submit" class="contact-section__submit">Submit!</button>
-                    </form>
-                </div>
+        <section
+          class="contact-section"
+          id="contact"
+          aria-labelledby="contact-heading"
+        >
+          <div class="container contact-section__inner">
+            <div class="contact-section__info">
+              <h2 id="contact-heading" class="contact-section__title">
+                Contact Us
+              </h2>
+              <p class="contact-section__lead">
+                We are here for you! Contact us with any questions or to discuss
+                your real estate needs. Our team of experts is ready to help
+                you.
+              </p>
+              <h3 class="contact-section__subhead">Office location</h3>
+              <ul class="contact-section__list">
+                <li class="contact-section__row">
+                  <span class="contact-section__icon" aria-hidden="true">
+                    <img src="/assets/icons/phone.svg" />
+                  </span>
+                  <a class="contact-section__link" href="tel:+12125550187">
+                    <span style="font-weight: bold">Phone:</span>
+                    +1 (212) 555-0187
+                  </a>
+                </li>
+                <li class="contact-section__row">
+                  <span class="contact-section__icon" aria-hidden="true">
+                    <img src="/assets/icons/email.svg" />
+                  </span>
+                  <a
+                    class="contact-section__link"
+                    href="mailto:contact@maventa.com"
+                  >
+                    <span style="font-weight: bold">Email: </span
+                    >contact@maventa.com</a
+                  >
+                </li>
+                <li class="contact-section__row">
+                  <span class="contact-section__icon" aria-hidden="true">
+                    <img src="/assets/icons/address.svg" />
+                  </span>
+                  <span class="contact-section__text">
+                    <a
+                      href="https://www.google.com/maps?q=1234+Madison+Avenue,+Suite+500,+New+York,+NY+10022,+USA"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span style="font-weight: bold">Address: </span>
+                      1234 Madison Avenue, Suite 500, New York, NY 10022, United
+                      States
+                    </a>
+                  </span>
+                </li>
+              </ul>
             </div>
+            <div class="contact-section__form-wrap">
+              <form class="contact-section__form" action="#" method="post">
+                <label class="sr-only" for="contact-name">Name</label>
+                <input
+                  id="contact-name"
+                  class="contact-section__input"
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  autocomplete="name"
+                  required
+                />
+                <label class="sr-only" for="contact-phone">Phone number</label>
+                <input
+                  id="contact-phone"
+                  class="contact-section__input"
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone number"
+                  autocomplete="tel"
+                />
+                <label class="sr-only" for="contact-message">Message</label>
+                <textarea
+                  id="contact-message"
+                  class="contact-section__textarea"
+                  name="message"
+                  rows="5"
+                  placeholder="Leave your detailed message..."
+                  required
+                ></textarea>
+                <button type="submit" class="contact-section__submit">
+                  Submit!
+                </button>
+              </form>
+            </div>
+          </div>
         </section>
       </main>
-
-      <footer class="home-site-footer">
-        <div class="home-site-footer__curve" aria-hidden="true"></div>
-        <div class="container home-site-footer__top">
-            <div class="home-site-footer__cta-copy">
-                <h2 class="home-site-footer__cta-title">Ready To Work With Us?</h2>
-                <p class="home-site-footer__cta-text">
-                    Tell us about your goals and we will match you with the right specialist — from first conversation to closing.
-                </p>
-            </div>
-            <a href="#contact" class="home-site-footer__cta-btn" aria-label="Go to contact form">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
-        </div>
-        <div class="container home-site-footer__meta">
-            <p class="home-site-footer__col home-site-footer__address">1234 Madison Avenue, Suite 500, New York, NY 10022, United States</p>
-            <div class="home-site-footer__col home-site-footer__reach">
-                <a href="tel:+12125550187">+1 (212) 555-0187</a>
-                <a href="mailto:contact@maventa.com">contact@maventa.com</a>
-            </div>
-            <p class="home-site-footer__col home-site-footer__legal">All rights reserved © <span id="footer-year">2026</span>, Maventa</p>
-            <div class="home-site-footer__col home-site-footer__social">
-                <a href="#" class="home-site-footer__social-link">Facebook</a>
-                <a href="#" class="home-site-footer__social-link">Instagram</a>
-                <a href="#" class="home-site-footer__social-link">X / Twitter</a>
-            </div>
-        </div>
-        <p class="home-site-footer__brand">MAVENTA</p>
-      </footer>
     </div>
+    <footer class="site-footer">
+      <div class="site-footer__curve" aria-hidden="true"></div>
+      <div class="container site-footer__top">
+        <div class="site-footer__cta-copy">
+          <h2 class="site-footer__cta-title">Ready To Work With Us?</h2>
+          <p class="site-footer__cta-text">
+            Starting a real estate journey can seem overwhelming, but it doesn’t
+            have to be! Our team of experts is here to guide you every step of
+            the way. Whether you’re looking for your ideal home, looking to
+            invest in property, or need advice on selling, we’re ready to offer
+            you customized solutions to suit your specific needs. Contact us
+            today and let’s discuss how we can turn your vision into reality!
+          </p>
+        </div>
+        <a
+          href="#contact"
+          class="site-footer__cta-btn"
+          aria-label="Go to contact form"
+        >
+          <img src="/assets/icons/arrow-right-up.svg" />
+        </a>
+      </div>
+      <div class="container site-footer__meta">
+        <p class="site-footer__col site-footer__address">
+          <a
+            href="https://maps.google.com/?q=1234+Madison+Avenue,+Suite+500,+New+York,+NY+10022,+United+States"
+            target="_blank"
+            rel="noreferrer"
+          >
+            1234 Madison Avenue, Suite 500, New York, NY 10022, United States
+          </a>
+        </p>
+        <div class="site-footer__col site-footer__reach">
+          <a href="tel:+12125550187">+1 (212) 555-0187</a>
+          <a href="mailto:contact@maventa.com">contact@maventa.com</a>
+        </div>
+        <p class="site-footer__col site-footer__legal">
+          All rights reserved © <span id="footer-year">© 2026</span>, Maventa.
+          Created by
+          <a href="https://sykors.com" target="_blank" rel="noreferrer"
+            >Sykors Media</a
+          >
+        </p>
+        <div class="site-footer__col site-footer__social">
+          <a href="#" class="site-footer__social-link">Facebook</a>
+          <a href="#" class="site-footer__social-link">Instagram</a>
+          <a href="#" class="site-footer__social-link">X (Twitter)</a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="site-footer-logo">
+          <img src="../assets/home/MAVENTA.svg" />
+        </div>
+      </div>
+    </footer>
 
     <script defer src="../js/main.js"></script>
   </body>
