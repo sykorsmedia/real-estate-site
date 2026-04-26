@@ -34,6 +34,7 @@
   flex-direction: column;
   flex: 1;
   min-height: 0;
+  padding-bottom: 88px;  
 }
 
 .hero-background {
@@ -59,7 +60,8 @@
   flex-direction: column;
   align-items: stretch;
   min-height: 0;
-  margin-top: 90px;
+  margin-top: 164px;
+  flex: 1;        /* ADD THIS */
 }
 
 .hero-content-text {
@@ -72,6 +74,18 @@
   width: 100%;
   max-width: 1180px;
   margin: 0 auto;
+
+  color: #fff;
+
+  font-size: clamp(72px, 16vw, 220px);
+  line-height: 0.82;
+text-align: left;
+  font-weight: 700;
+  
+
+  letter-spacing: clamp(0.02em, 0.8vw, 0.12em);
+
+  white-space: nowrap;
 }
 
 .hero-title img {
@@ -90,10 +104,17 @@
   align-items: flex-start;
   width: 100%;
   min-height: 0;
-  /* Keep the left copy block anchored below the title */
-  padding-top: clamp(172px, 22.6vh, 236px);
   box-sizing: border-box;
+  justify-content: space-between; /* ADD THIS */
 }
+
+.hero-content > img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 /* Figma: ~460px column, closer to MAVENTA, left-aligned */
 .hero-tagline {
@@ -109,16 +130,16 @@
   text-align: left;
   color: rgba(255, 255, 255, 0.95);
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  margin-top: 24px;
 }
 
 .hero-discover-wrapper {
-  margin-top: 0;
+  margin-top: auto;   /* CHANGE from 0 to auto */
   width: min(430px, 100%);
   max-width: 430px;
   display: flex;
   justify-content: flex-start;
 }
-
 /* Figma: ~299 × 60 (Hug) */
 .hero-discover-btn {
   display: inline-flex;
@@ -167,7 +188,7 @@
 /* --- Hero: tablet (≤1024px) — prevent title overflow; desktop unchanged above 1024px --- */
 @media (max-width: 1024px) {
   .hero-section {
-    min-height: clamp(560px, 88vh, 800px);
+    min-height: 800px;
   }
 
   .hero-title {
@@ -181,14 +202,15 @@
   }
 
   .hero-main-copy {
-    padding-top: clamp(150px, 26vh, 230px);
+    padding-top: 0;
+    flex: 1; 
   }
 }
 
 /* --- Hero: mobile (≤768px) — vertical stack, centered, no horizontal overflow --- */
 @media (max-width: 768px) {
   .hero-section {
-    min-height: clamp(520px, 82vh, 720px);
+    min-height: 800px
   }
 
   .hero-content {
@@ -219,12 +241,12 @@
 
   .hero-main-copy {
     order: 1;
-    flex: none;
+    flex: 1;
     width: 100%;
     align-items: center;
     text-align: center;
-    margin-top: 200px;
-    margin-bottom: 60px;
+    margin-top: 0;
+    margin-bottom: 0;
     gap: clamp(12px, 2vh, 18px);
   }
 
@@ -271,7 +293,7 @@
   }
 
   .hero-section {
-    min-height: clamp(460px, 76vh, 620px);
+    min-height: 800px
   }
 
   .hero-title {

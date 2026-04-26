@@ -1,12 +1,30 @@
 /* Home hero header */
 .hero-header-container {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  margin-bottom: -88px;
+  background: transparent;
+  transition:
+    background 0.3s ease,
+    backdrop-filter 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hero-header-container .container {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
   column-gap: clamp(12px, 2vw, 24px);
-  padding: 24px 0;
-  width: 100%;
+  padding: 0 24px; 
+  height: 80px; 
+}
+.hero-header-container.scrolled {
+  background: rgba(46, 44, 96, 1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .hero-header-container .hero-logo {
@@ -155,6 +173,16 @@
 @media (max-width: 1024px) {
   .hero-header-container {
     grid-template-columns: minmax(0, 1fr) auto auto;
+    padding: 0 24px;
+  }
+
+  .hero-header-container .container {
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding: 0 24px;
+  }
+
+  .hero-header-container .hero-nav-shell {
+    justify-self: end;
   }
 
   .mobile-menu-btn {
@@ -212,7 +240,7 @@
 
 @media (max-width: 430px) {
   .hero-header-container {
-    padding: 16px 0;
+    padding: 0 0;
     grid-template-columns: minmax(0, 1fr) auto;
     column-gap: 12px;
   }
