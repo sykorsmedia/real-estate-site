@@ -210,11 +210,11 @@
 
 .mission-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 11fr 1fr;
   grid-template-rows: auto auto;
   grid-template-areas:
-    "heading gallery"
-    "nav     gallery";
+    "heading nav"
+    "gallery gallery";
   gap: 24px 48px;
   align-items: start;
   max-width: 1200px;
@@ -235,7 +235,9 @@
   grid-area: nav;
   display: flex;
   gap: 12px;
-  align-items: flex-end;
+  align-items: flex-end;  
+  justify-content: flex-end;
+  height: 100%;       
 }
 
 .mission-gallery-wrapper {

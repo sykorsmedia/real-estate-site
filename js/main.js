@@ -96,11 +96,12 @@
 (function () {
   const header = document.getElementById("site-header");
   if (!header) return;
-  window.addEventListener(
-    "scroll",
-    () => {
-      header.classList.toggle("scrolled", window.scrollY > 10);
-    },
-    { passive: true },
-  );
+
+  function updateHeader() {
+    header.classList.toggle("scrolled", window.scrollY > 10);
+  }
+
+  window.addEventListener("scroll", updateHeader, { passive: true });
+  window.addEventListener("pageshow", updateHeader);
+  updateHeader(); // run immediately on load
 })();

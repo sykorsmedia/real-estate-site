@@ -6,10 +6,7 @@
   width: 100%;
   margin-bottom: -88px;
   background: transparent;
-  transition:
-    background 0.3s ease,
-    backdrop-filter 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero-header-container .container {
@@ -17,8 +14,12 @@
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
   column-gap: clamp(12px, 2vw, 24px);
-  padding: 0 24px; 
-  height: 80px; 
+  padding: 0 40px;
+  height: 88px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 .hero-header-container.scrolled {
   background: rgba(46, 44, 96, 1);
@@ -158,6 +159,11 @@
 
 .btn-talk:hover {
   background: rgba(255, 255, 255, 0.92);
+}
+
+.hero-header-container.page-header {
+  background: rgba(46, 44, 96, 1);
+  margin-bottom: 0;
 }
 
 @media (min-width: 1025px) {
