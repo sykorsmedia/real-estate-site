@@ -103,5 +103,5 @@
 
   window.addEventListener("scroll", updateHeader, { passive: true });
   window.addEventListener("pageshow", updateHeader);
-  updateHeader(); // run immediately on load
+  updateHeader();
 })();
