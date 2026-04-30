@@ -29,19 +29,28 @@
 
 .hero-section > .container {
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   display: flex;
   flex-direction: column;
   flex: 1;
   min-height: 0;
-  padding-bottom: 88px;  
+  padding-bottom: 88px;
 }
 
 .hero-background {
-  background: white;
+  /* background: white; */
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 2;
+}
+
+.hero-section-bg-color {
+  background: linear-gradient(
+    to top,
+    rgba(255, 200, 150, 0.2),
+    rgba(120, 130, 180, 0.4),
+    rgba(70, 80, 130, 0.6)
+  );
 }
 
 .hero-bg-image,
@@ -50,6 +59,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   object-position: 34% 56%;
 }
 
@@ -61,7 +71,7 @@
   align-items: stretch;
   min-height: 0;
   margin-top: 164px;
-  flex: 1;        /* ADD THIS */
+  flex: 1; /* ADD THIS */
 }
 
 .hero-content-text {
@@ -71,6 +81,7 @@
 }
 
 .hero-title {
+  z-index: 1;
   width: 100%;
   max-width: 1180px;
   margin: 0 auto;
@@ -79,9 +90,8 @@
 
   font-size: clamp(72px, 16vw, 220px);
   line-height: 0.82;
-text-align: left;
+  text-align: left;
   font-weight: 700;
-  
 
   letter-spacing: clamp(0.02em, 0.8vw, 0.12em);
 
@@ -97,7 +107,7 @@ text-align: left;
 /* Copy + CTA: left-aligned with container; tagline under title; button lower (Figma deck) */
 .hero-main-copy {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -114,7 +124,6 @@ text-align: left;
   height: auto;
   display: block;
 }
-
 
 /* Figma: ~460px column, closer to MAVENTA, left-aligned */
 .hero-tagline {
@@ -134,7 +143,7 @@ text-align: left;
 }
 
 .hero-discover-wrapper {
-  margin-top: auto;   /* CHANGE from 0 to auto */
+  margin-top: auto; /* CHANGE from 0 to auto */
   width: min(430px, 100%);
   max-width: 430px;
   display: flex;
@@ -203,14 +212,14 @@ text-align: left;
 
   .hero-main-copy {
     padding-top: 0;
-    flex: 1; 
+    flex: 1;
   }
 }
 
 /* --- Hero: mobile (≤768px) — vertical stack, centered, no horizontal overflow --- */
 @media (max-width: 768px) {
   .hero-section {
-    min-height: 800px
+    min-height: 800px;
   }
 
   .hero-content {
@@ -293,7 +302,7 @@ text-align: left;
   }
 
   .hero-section {
-    min-height: 800px
+    min-height: 800px;
   }
 
   .hero-title {
@@ -1446,6 +1455,9 @@ text-align: left;
 }
 
 @media (max-width: 720px) {
+  .consultation-section__container {
+    padding: 0px 20px;
+  }
   .consultation-section__form {
     min-height: 0;
     height: auto;
@@ -1455,7 +1467,7 @@ text-align: left;
     flex-direction: column;
     align-items: stretch;
     gap: 10px;
-        padding-left: 0;
+    padding-left: 0;
     padding-right: 0;
   }
   .consultation-section__card {
@@ -1938,7 +1950,7 @@ text-align: left;
 /* -------------------------------------------------------------------------- */
 .contact-section {
   padding: clamp(36px, 5.5vw, 100px) 0 clamp(44px, 7vw, 100px);
-  background: #F1F0F4;
+  background: #f1f0f4;
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 50px;
 }

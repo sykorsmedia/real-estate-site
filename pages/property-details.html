@@ -11,7 +11,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles/global.css" />
-    <link rel="stylesheet" href="../styles/header.css" />
     <link rel="stylesheet" href="../styles/property-details.css" />
     <link rel="stylesheet" href="../styles/home.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
@@ -21,32 +20,34 @@
       <div class="hero-background" aria-hidden="true">
         <img src="../assets/properties-details/hero-bg.jpg" />
       </div>
-      <div class="container">
-        <header class="page-header hero-header-container">
-          <a href="../index.html" class="hero-logo">
-            <img src="../assets/Logo.png" alt="Maventa Estate Logo" />
-          </a>
-          <div class="hero-nav-shell">
-            <button
-              type="button"
-              class="mobile-menu-btn"
-              aria-label="Toggle menu"
-              aria-controls="hero-main-nav"
-              aria-expanded="false"
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-            <nav id="hero-main-nav" class="hero-nav" aria-label="Primary">
-              <a href="../index.html" class="nav-link">Home</a>
-              <a href="properties.html" class="nav-link">Properties</a>
-              <a href="services.html" class="nav-link">Services</a>
-              <a href="about.html" class="nav-link">About Us</a>
-              <a href="team.html" class="nav-link">Team</a>
-            </nav>
+      <div class="hero-header-container" style="margin-top: 30px">
+        <header id="site-header">
+          <div class="container">
+            <a href="../index.html" class="hero-logo">
+              <img src="../assets/Logo.png" alt="Maventa Estate Logo" />
+            </a>
+            <div class="hero-nav-shell">
+              <button
+                type="button"
+                class="mobile-menu-btn"
+                aria-label="Toggle menu"
+                aria-controls="hero-main-nav"
+                aria-expanded="false"
+              >
+                <span></span><span></span><span></span>
+              </button>
+              <nav id="hero-main-nav" class="hero-nav" aria-label="Primary">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="properties.html" class="nav-link" aria-current="page"
+                  >Properties</a
+                >
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="team.html" class="nav-link">Team</a>
+              </nav>
+            </div>
+            <a href="#contact" class="btn-talk">LET'S TALK!</a>
           </div>
-          <a href="#contact" class="btn-talk">LET'S TALK!</a>
         </header>
       </div>
     </section>
@@ -257,41 +258,39 @@
             <h2 class="property-house-about-contact-title">
               Let's Choose Your Next Dream Home with Us!
             </h2>
-            <form class="property-house-about-contact-form">
+            <form
+              class="property-house-about-contact-form"
+              id="property-contact-form"
+            >
               <label>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  style="background: #fafafa"
-                />
+                <input type="text" name="name" placeholder="Name" />
               </label>
               <label>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email Address"
-                  style="background: #fafafa"
-                />
+                <input type="email" name="email" placeholder="Email Address" />
               </label>
               <label>
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone Number"
-                  style="background: #fafafa"
-                />
+                <input type="tel" name="phone" placeholder="Phone Number" />
               </label>
               <label>
                 <textarea
                   name="message"
                   rows="5"
                   placeholder="Leave your detailed message..."
-                  style="background: #fafafa"
                 ></textarea>
               </label>
+
               <button type="submit">Send a Message!</button>
             </form>
+
+            <!-- MODAL -->
+            <div class="property-modal" id="property-modal">
+              <div class="property-modal__content">
+                <p class="property-modal__text" id="property-modal-message"></p>
+                <button class="property-modal__close" id="property-modal-close">
+                  Close
+                </button>
+              </div>
+            </div>
           </div>
         </aside>
       </div>
@@ -503,7 +502,7 @@
           </ul>
         </div>
         <div class="contact-section__form-wrap">
-          <form class="contact-section__form" action="#" method="post">
+          <form class="contact-section__form" id="contact-form">
             <label class="sr-only" for="contact-name">Name</label>
             <input
               id="contact-name"
@@ -514,6 +513,7 @@
               autocomplete="name"
               required
             />
+
             <label class="sr-only" for="contact-phone">Phone number</label>
             <input
               id="contact-phone"
@@ -523,6 +523,7 @@
               placeholder="Phone number"
               autocomplete="tel"
             />
+
             <label class="sr-only" for="contact-message">Message</label>
             <textarea
               id="contact-message"
@@ -532,10 +533,21 @@
               placeholder="Leave your detailed message..."
               required
             ></textarea>
+
             <button type="submit" class="contact-section__submit">
               Submit!
             </button>
           </form>
+
+          <!-- MODAL -->
+          <div class="contact-modal" id="contact-modal">
+            <div class="contact-modal__content">
+              <p class="contact-modal__text" id="contact-modal-message"></p>
+              <button class="contact-modal__close" id="contact-modal-close">
+                Close
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -598,5 +610,7 @@
 
     <script defer src="../js/main.js"></script>
     <script defer src="../js/property-details.js"></script>
+    <script src="../js/property-form.js"></script>
+    <script src="../js//contact-form.js"></script>
   </body>
 </html>

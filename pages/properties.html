@@ -784,7 +784,7 @@
               </ul>
             </div>
             <div class="contact-section__form-wrap">
-              <form class="contact-section__form" action="#" method="post">
+              <form class="contact-section__form" id="contact-form">
                 <label class="sr-only" for="contact-name">Name</label>
                 <input
                   id="contact-name"
@@ -795,6 +795,7 @@
                   autocomplete="name"
                   required
                 />
+
                 <label class="sr-only" for="contact-phone">Phone number</label>
                 <input
                   id="contact-phone"
@@ -804,6 +805,7 @@
                   placeholder="Phone number"
                   autocomplete="tel"
                 />
+
                 <label class="sr-only" for="contact-message">Message</label>
                 <textarea
                   id="contact-message"
@@ -813,10 +815,21 @@
                   placeholder="Leave your detailed message..."
                   required
                 ></textarea>
+
                 <button type="submit" class="contact-section__submit">
                   Submit!
                 </button>
               </form>
+
+              <!-- MODAL -->
+              <div class="contact-modal" id="contact-modal">
+                <div class="contact-modal__content">
+                  <p class="contact-modal__text" id="contact-modal-message"></p>
+                  <button class="contact-modal__close" id="contact-modal-close">
+                    Close
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -880,5 +893,8 @@
     </footer>
 
     <script defer src="../js/main.js"></script>
+    <script src="../js/home-discover.js"></script>
+    <script src="../js/pagination.js"></script>
+    <script src="../js/contact-form.js"></script>
   </body>
 </html>
