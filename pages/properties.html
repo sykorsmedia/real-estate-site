@@ -554,54 +554,62 @@
                 </div>
               </article>
             </div>
-          </div>
-          <!-- Navigation -->
-          <nav
-            class="properties-section__pagination"
-            aria-label="Main results pagination"
-          >
-            <button
-              type="button"
-              class="properties-pagination__btn"
-              disabled
-              aria-disabled="true"
+            <!-- Navigation -->
+            <nav
+              class="properties-section__pagination"
+              aria-label="Main results pagination"
             >
-              <div style="display: flex; align-items: center; gap: 5px">
-                <img src="../assets/icons/arrow-left.svg" />
-                <span>Previous</span>
-              </div>
-            </button>
-            <div class="properties-pagination__pages">
               <button
                 type="button"
-                class="properties-pagination__page properties-pagination__page--active"
-                aria-current="page"
+                class="properties-pagination__btn"
+                data-pagination-prev
+                disabled
+                aria-disabled="true"
               >
-                1
+                <span class="properties-pagination__btn-content">
+                  <img src="../assets/icons/arrow-left.svg" alt="" />
+                  <span>Previous</span>
+                </span>
               </button>
-              <button type="button" class="properties-pagination__page">
-                2
-              </button>
-              <button type="button" class="properties-pagination__page">
-                3
-              </button>
-              <span class="properties-pagination__ellipsis" aria-hidden="true"
-                >…</span
-              >
-              <button type="button" class="properties-pagination__page">
-                9
-              </button>
-              <button type="button" class="properties-pagination__page">
-                10
-              </button>
-            </div>
-            <button type="button" class="properties-pagination__btn">
-              <div style="display: flex; align-items: center; gap: 5px">
-                <span>Next</span>
-                <img src="../assets/icons/arrow-right.svg" />
+              <div class="properties-pagination__pages">
+                <button
+                  type="button"
+                  class="properties-pagination__page properties-pagination__page--active"
+                  aria-current="page"
+                >
+                  1
+                </button>
+                <button type="button" class="properties-pagination__page">
+                  2
+                </button>
+                <button type="button" class="properties-pagination__page">
+                  3
+                </button>
+                <span class="properties-pagination__ellipsis" aria-hidden="true"
+                  >...</span
+                >
+                <button type="button" class="properties-pagination__page">
+                  7
+                </button>
+                <button type="button" class="properties-pagination__page">
+                  8
+                </button>
+                <button type="button" class="properties-pagination__page">
+                  9
+                </button>
               </div>
-            </button>
-          </nav>
+              <button
+                type="button"
+                class="properties-pagination__btn"
+                data-pagination-next
+              >
+                <span class="properties-pagination__btn-content">
+                  <span>Next</span>
+                  <img src="../assets/icons/arrow-right.svg" alt="" />
+                </span>
+              </button>
+            </nav>
+          </div>
         </section>
 
         <section class="faq-section" id="faq" aria-labelledby="faq-heading">
@@ -609,7 +617,7 @@
             <div class="faq-section__panel">
               <header class="faq-section__header">
                 <h2 id="faq-heading" class="faq-section__title">
-                  FREQUENTLY ASKED QUESTIONS
+                  Frequently Asked Questions
                 </h2>
                 <p class="faq-section__intro">
                   Have questions? We have answers! Check out our FAQ section to
@@ -648,11 +656,10 @@
                   </summary>
                   <div class="faq-item__body">
                     <p>
-                      Typically: define your budget and preferences, view
-                      shortlisted properties, make an offer, complete due
-                      diligence and financing, then sign contracts and close. We
-                      guide you at each step and coordinate with lenders and
-                      legal counsel as needed.
+                      Typically you will need proof of identity, proof of funds
+                      or a mortgage pre-approval, and any documents your lender
+                      requests. We walk you through the full checklist for your
+                      specific transaction.
                     </p>
                   </div>
                 </details>
@@ -666,10 +673,10 @@
                   </summary>
                   <div class="faq-item__body">
                     <p>
-                      Common requirements include proof of identity, title and
-                      survey documents, disclosure forms, purchase agreement,
-                      and lender paperwork when a mortgage is involved. We
-                      provide a checklist specific to your sale or purchase.
+                      Timeline varies by location, price, and presentation. A
+                      well-priced, well-marketed home often attracts strong
+                      interest within the first few weeks. We set clear
+                      milestones so you always know what to expect.
                     </p>
                   </div>
                 </details>
@@ -683,9 +690,9 @@
                   </summary>
                   <div class="faq-item__body">
                     <p>
-                      Yes. We can help market your rental, screen tenants,
-                      prepare leases, and coordinate ongoing management tasks so
-                      landlords and tenants have a smooth experience.
+                      Yes. We support residential and commercial leases, from
+                      marketing and tenant screening to lease agreements and
+                      handover.
                     </p>
                   </div>
                 </details>
@@ -698,10 +705,9 @@
                   </summary>
                   <div class="faq-item__body">
                     <p>
-                      Call us, email, or use the contact form on this page with
-                      the property reference and your preferred times. We will
-                      confirm an appointment and send any access details you
-                      need.
+                      We coordinate professional photography and can recommend
+                      staging options so your property makes a strong first
+                      impression online and in person.
                     </p>
                   </div>
                 </details>
@@ -715,10 +721,9 @@
                   </summary>
                   <div class="faq-item__body">
                     <p>
-                      Commission structures depend on the type of transaction
-                      and local market practice. We explain fees upfront in
-                      writing so there are no surprises before you sign a
-                      representation agreement.
+                      Contact us by phone, email, or the form on this page. We
+                      will confirm a time that works for you and prepare
+                      everything needed for the visit.
                     </p>
                   </div>
                 </details>
@@ -746,7 +751,7 @@
               <ul class="contact-section__list">
                 <li class="contact-section__row">
                   <span class="contact-section__icon" aria-hidden="true">
-                    <img src="/assets/icons/phone.svg" />
+                    <img src="../assets/icons/phone.svg" />
                   </span>
                   <a class="contact-section__link" href="tel:+12125550187">
                     <span style="font-weight: bold">Phone:</span>
@@ -755,7 +760,7 @@
                 </li>
                 <li class="contact-section__row">
                   <span class="contact-section__icon" aria-hidden="true">
-                    <img src="/assets/icons/email.svg" />
+                    <img src="../assets/icons/email.svg" />
                   </span>
                   <a
                     class="contact-section__link"
@@ -767,7 +772,7 @@
                 </li>
                 <li class="contact-section__row">
                   <span class="contact-section__icon" aria-hidden="true">
-                    <img src="/assets/icons/address.svg" />
+                    <img src="../assets/icons/address.svg" />
                   </span>
                   <span class="contact-section__text">
                     <a
@@ -776,8 +781,7 @@
                       rel="noopener noreferrer"
                     >
                       <span style="font-weight: bold">Address: </span>
-                      1234 Madison Avenue, Suite 500, New York, NY 10022, United
-                      States
+                      New York, NY 10022, United States
                     </a>
                   </span>
                 </li>
@@ -855,7 +859,7 @@
           class="site-footer__cta-btn"
           aria-label="Go to contact form"
         >
-          <img src="/assets/icons/arrow-right-up.svg" />
+          <img src="../assets/icons/arrow-right-up.svg" />
         </a>
       </div>
       <div class="container site-footer__meta">
@@ -865,20 +869,27 @@
             target="_blank"
             rel="noreferrer"
           >
-            1234 Madison Avenue, Suite 500, New York, NY 10022, United States
+            New York, NY 10022, United States
           </a>
         </p>
         <div class="site-footer__col site-footer__reach">
-          <a href="tel:+12125550187">+1 (212) 555-0187</a>
-          <a href="mailto:contact@maventa.com">contact@maventa.com</a>
+          <div class="site-footer__ellipse">
+            <img src="../assets/icons/ellipse.svg" />
+          </div>
+          <div>
+            <a href="tel:+12125550187">+1 (212) 555-0187</a>
+            <a href="mailto:contact@maventa.com">contact@maventa.com</a>
+          </div>
         </div>
-        <p class="site-footer__col site-footer__legal">
-          All rights reserved © <span id="footer-year">© 2026</span>, Maventa.
-          Created by
-          <a href="https://sykors.com" target="_blank" rel="noreferrer"
-            >Sykors Media</a
-          >
-        </p>
+        <div class="site-footer__col site-footer__legal">
+          <div class="site-footer__ellipse">
+            <img src="../assets/icons/ellipse.svg" />
+          </div>
+          <div>
+            All rights reserved<br />
+            © 2026 , Maventa.
+          </div>
+        </div>
         <div class="site-footer__col site-footer__social">
           <a href="#" class="site-footer__social-link">Facebook</a>
           <a href="#" class="site-footer__social-link">Instagram</a>

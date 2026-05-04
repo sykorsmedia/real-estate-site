@@ -1,104 +1,138 @@
-// select elements
 const grid = document.querySelector(".properties-section__grid");
-const cards = Array.from(document.querySelectorAll(".property-card"));
+const sourceCards = Array.from(document.querySelectorAll(".property-card"));
+const pagination = document.querySelector(".properties-section__pagination");
+const pagesContainer = document.querySelector(".properties-pagination__pages");
+const paginationButtons = pagination
+  ? Array.from(pagination.querySelectorAll(".properties-pagination__btn"))
+  : [];
+const prevBtn =
+  document.querySelector("[data-pagination-prev]") || paginationButtons[0];
+const nextBtn =
+  document.querySelector("[data-pagination-next]") ||
+  paginationButtons[paginationButtons.length - 1];
 
-const nextBtn = document.querySelector(
-  ".properties-pagination__btn:last-child",
-);
-const prevBtn = document.querySelector(
-  ".properties-pagination__btn:first-child",
-);
-const pageButtons = document.querySelectorAll(".properties-pagination__page");
-
-// settings
 const itemsPerPage = 6;
+const useRandomPropertyPages = document.body.classList.contains(
+  "properties-page",
+);
+const totalPages = useRandomPropertyPages
+  ? 10
+  : Math.ceil(sourceCards.length / itemsPerPage);
+const shuffledCards = shuffleCards(sourceCards);
 let currentPage = 1;
 
-// total pages
-const totalPages = Math.ceil(cards.length / itemsPerPage);
+function shuffleCards(cards) {
+  return [...cards].sort(() => Math.random() - 0.5);
+}
 
-// shuffle o singură dată (UX corect)
-const shuffledCards = [...cards].sort(() => Math.random() - 0.5);
-
-// render
-function renderPage(page) {
+function renderCards() {
   grid.innerHTML = "";
 
-  const start = (page - 1) * itemsPerPage;
-  const end = start + itemsPerPage;
+  const start = (currentPage - 1) * itemsPerPage;
+  const pageCards = useRandomPropertyPages
+    ? shuffleCards(sourceCards).slice(0, itemsPerPage)
+    : shuffledCards.slice(start, start + itemsPerPage);
 
-  const pageItems = shuffledCards.slice(start, end);
-
-  pageItems.forEach((card) => {
+  pageCards.forEach((card) => {
     grid.appendChild(card);
   });
-
-  updatePaginationUI();
 }
 
-const pagesContainer = document.querySelector(".properties-pagination__pages");
+function createPageButton(page) {
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "properties-pagination__page";
+  btn.textContent = page;
+  btn.setAttribute("aria-label", `Go to page ${page}`);
 
-function generatePageButtons() {
+  btn.addEventListener("click", () => {
+    goToPage(page);
+  });
+
+  return btn;
+}
+
+function getVisiblePages() {
+  if (!useRandomPropertyPages) {
+    return Array.from({ length: totalPages }, (_, index) => index + 1);
+  }
+
+  if (currentPage <= 3) {
+    return [1, 2, 3, "ellipsis-end", 9, 10];
+  }
+
+  if (currentPage < 9) {
+    const middleStart = Math.min(Math.max(currentPage - 1, 4), 7);
+    return [
+      1,
+      2,
+      3,
+      "ellipsis-start",
+      middleStart,
+      middleStart + 1,
+      middleStart + 2,
+      "ellipsis-end",
+      9,
+      10,
+    ];
+  }
+
+  return [1, 2, 3, "ellipsis-start", 9, 10];
+}
+
+function renderPageButtons() {
   pagesContainer.innerHTML = "";
 
-  for (let i = 1; i <= totalPages; i++) {
-    const btn = document.createElement("button");
-    btn.className = "properties-pagination__page";
-    btn.textContent = i;
+  getVisiblePages().forEach((page) => {
+    if (typeof page === "string" && page.startsWith("ellipsis")) {
+      const ellipsis = document.createElement("span");
+      ellipsis.className = "properties-pagination__ellipsis";
+      ellipsis.setAttribute("aria-hidden", "true");
+      ellipsis.textContent = "...";
+      pagesContainer.appendChild(ellipsis);
+      return;
+    }
 
-    btn.addEventListener("click", () => {
-      currentPage = i;
-      renderPage(currentPage);
-    });
-
-    pagesContainer.appendChild(btn);
-  }
+    pagesContainer.appendChild(createPageButton(page));
+  });
 }
 
-// update UI
 function updatePaginationUI() {
-  const pageButtons = document.querySelectorAll(".properties-pagination__page");
+  document.querySelectorAll(".properties-pagination__page").forEach((btn) => {
+    const isCurrent = Number(btn.textContent) === currentPage;
 
-  pageButtons.forEach((btn, index) => {
-    btn.classList.remove("properties-pagination__page--active");
-    btn.removeAttribute("aria-current");
+    btn.classList.toggle("properties-pagination__page--active", isCurrent);
 
-    if (index + 1 === currentPage) {
-      btn.classList.add("properties-pagination__page--active");
+    if (isCurrent) {
       btn.setAttribute("aria-current", "page");
+    } else {
+      btn.removeAttribute("aria-current");
     }
   });
 
   prevBtn.disabled = currentPage === 1;
+  prevBtn.setAttribute("aria-disabled", String(prevBtn.disabled));
+
   nextBtn.disabled = currentPage === totalPages;
+  nextBtn.setAttribute("aria-disabled", String(nextBtn.disabled));
 }
 
-// events
-nextBtn.addEventListener("click", () => {
-  if (currentPage < totalPages) {
-    currentPage++;
-    renderPage(currentPage);
-  }
-});
+function goToPage(page) {
+  currentPage = Math.min(Math.max(page, 1), totalPages);
+  renderPageButtons();
+  renderCards();
+  updatePaginationUI();
+}
 
-prevBtn.addEventListener("click", () => {
-  if (currentPage > 1) {
-    currentPage--;
-    renderPage(currentPage);
-  }
-});
+if (grid && sourceCards.length && pagesContainer && prevBtn && nextBtn) {
+  renderPageButtons();
+  goToPage(currentPage);
 
-// click pe pagini (1,2,3...)
-pageButtons.forEach((btn, index) => {
-  btn.addEventListener("click", () => {
-    const page = index + 1;
-
-    if (page <= totalPages) {
-      currentPage = page;
-      renderPage(currentPage);
-    }
+  prevBtn.addEventListener("click", () => {
+    goToPage(currentPage - 1);
   });
-});
 
-generatePageButtons();
-renderPage(currentPage);
+  nextBtn.addEventListener("click", () => {
+    goToPage(currentPage + 1);
+  });
+}

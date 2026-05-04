@@ -687,7 +687,7 @@
   margin: 0;
   max-width: 780px;
   width: 100%;
-  font-size: clamp(1.35rem, 2.6vw, 2.5rem);
+  font-size: 40px;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -702,7 +702,7 @@
   padding-inline: clamp(0px, 2vw, 12px);
   box-sizing: border-box;
   font-family: var(--font-family);
-  font-size: clamp(0.9375rem, 1.35vw, 1.0625rem);
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.65;
   color: #2e2c60;
@@ -727,7 +727,7 @@
   padding: 10px 18px;
   border-radius: 999px;
   font-family: var(--font-family);
-  font-size: 0.8125rem;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
   color: #2e2c60;
@@ -892,7 +892,7 @@
 .properties-section .property-card__price {
   margin: 0;
   min-width: 0;
-  font-size: clamp(1.0625rem, 1.5vw, 1.5rem);
+  font-size: 24px;
   font-weight: 700;
   color: var(--primary-darker);
   line-height: 1.2;
@@ -905,7 +905,7 @@
   flex-shrink: 0;
   padding: 4px 15px;
   border-radius: 5px;
-  font-size: 0.6875rem;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -957,6 +957,7 @@
 }
 
 .properties-section .property-card__more {
+  font-family: "Montserrat", sans-serif;
   align-self: stretch;
   margin-top: auto;
   display: inline-flex;
@@ -965,8 +966,8 @@
   min-height: 42px;
   padding: 0 22px;
   border-radius: 999px;
-  font-size: 0.8125rem;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 500;
   text-decoration: none;
   color: var(--primary-darker);
   background: transparent;
@@ -989,10 +990,9 @@
 
 /* Properties pagination (home) */
 .properties-section__pagination {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
-  justify-content: center;
   gap: 12px;
   row-gap: 12px;
   width: 100%;
@@ -1003,6 +1003,7 @@
 }
 
 .properties-pagination__btn {
+  justify-self: start;
   cursor: pointer;
   margin: 0;
   padding: 10px 18px;
@@ -1019,6 +1020,22 @@
     color 0.2s ease,
     border-color 0.2s ease,
     opacity 0.2s ease;
+}
+
+.properties-pagination__btn:last-child {
+  justify-self: end;
+}
+
+.properties-pagination__btn-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.properties-pagination__btn img {
+  display: block;
+  width: 16px;
+  height: 16px;
 }
 
 .properties-pagination__btn:hover:not(:disabled) {
@@ -1098,9 +1115,28 @@
 
 @media (max-width: 767px) {
   .properties-section__pagination {
+    grid-template-columns: 1fr;
     gap: 10px;
     row-gap: 14px;
     margin-top: clamp(28px, 5vw, 44px);
+  }
+
+  .properties-pagination__btn,
+  .properties-pagination__btn:last-child,
+  .properties-pagination__pages {
+    justify-self: center;
+  }
+
+  .properties-pagination__btn:first-child {
+    order: 2;
+  }
+
+  .properties-pagination__pages {
+    order: 1;
+  }
+
+  .properties-pagination__btn:last-child {
+    order: 3;
   }
 }
 
@@ -1112,7 +1148,6 @@
   }
 
   .properties-pagination__btn {
-    display: none;
     padding: 9px 14px;
     font-size: 0.75rem;
     flex: 0 0 auto;
@@ -1170,7 +1205,7 @@
   margin-right: auto;
   max-width: 38rem;
   font-family: var(--font-family);
-  font-size: clamp(0.9375rem, 1.4vw, 1.0625rem);
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.65;
   color: var(--primary-main);
@@ -1245,6 +1280,7 @@
 }
 
 .solutions-item-content p {
+  max-width: 520px;
   margin: 0;
   font-family: var(--font-family);
   font-size: clamp(0.875rem, 1.2vw, 0.9375rem);
@@ -1378,7 +1414,7 @@
 .consultation-section__title {
   margin: 0;
   font-size: 40px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--color-white);
@@ -1387,7 +1423,6 @@
 .consultation-section__subtitle {
   margin: 0;
   max-width: 920px;
-  font-style: italic;
   font-size: 20px;
   line-height: 1.4;
   color: rgba(255, 255, 255, 0.84);
@@ -1495,7 +1530,7 @@
 /* 6. Why We're Your Best Choice                                              */
 /* -------------------------------------------------------------------------- */
 .why-best-section {
-  padding: clamp(22px, 3vw, 30px) 0 clamp(54px, 8vw, 84px);
+  padding: 150px 0px 100px;
   background: white;
   border-radius-left-bottom: 50px;
   border-radius-right-bottom: 50px;
@@ -1516,7 +1551,7 @@
 .why-best-section__title {
   margin: 0;
   font-family: "Lato", sans-serif;
-  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  font-size: 40px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #2e2c60;
@@ -1524,8 +1559,8 @@
 
 .why-best-section__subtitle {
   margin: 8px 0 0;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
   line-height: 1.55;
   color: #2e2c60;
 }
@@ -1590,10 +1625,11 @@
 
 .why-best-card__description {
   margin: 0;
-  max-width: 380px;
+  max-width: 520px;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.4;
-  color: var(--grey-600, #686868);
+  color: #2e2c60;
 }
 
 .why-best-card__metric {
@@ -1601,14 +1637,15 @@
   align-self: start;
   font-family: "DM Serif Display", serif;
   font-size: 100px;
-  font-style: italic;
+  font-weight: 400;
+  text-transform: uppercase;
   line-height: 1;
   color: #c6c2da;
   text-align: left;
 }
 
 .why-best-card__metric-label {
-  margin: 0;
+  margin-top: -26px;
   font-size: 16px;
   letter-spacing: 0.02em;
   color: #2e2c60;
@@ -1625,6 +1662,10 @@
 }
 
 @media (max-width: 900px) {
+  .why-best-section {
+    padding: 40px 0px 40px;
+  }
+
   .why-best-card,
   .why-best-card--reverse {
     grid-template-columns: 1fr;
